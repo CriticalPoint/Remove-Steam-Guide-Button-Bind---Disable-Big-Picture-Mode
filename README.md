@@ -46,7 +46,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the *Steam_Guide_Button_Disable - Default Steam install.ps1* script and, after reading on to see what it does, give it a run.
+If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the [Steam_Guide_Button_Disable - Default Steam install.ps1](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Steam_Guide_Button_Disable%20-%20Default%20Steam%20install.ps1) script and, after reading on to see what it does, give it a run.
 
 If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still).
 
