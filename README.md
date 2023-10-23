@@ -51,7 +51,7 @@ Any and all bindings to the guide button, no matter if you're on a Playstation, 
 
 Sort of like, say, oh I don't know, how you'd think that turning off a giant button that says "Guide Button Focuses Steam" might work. Yeah, well, it doesn't. This does. Ex facto; end of.
 
-All joking aside - there are some truly wonderful gamers out there that have shared fixes on various forums, the closest 'fix' I saw was to '*Setup Device Inputs*' and skip the Guide button assignment; pretty neat, but I've found that it borks the paddles on the Elite controllers. Plus I was a bit bored, and so that's how we ended up here.
+All joking aside - there are some truly wonderful gamers out there that have shared fixes on various forums, the closest 'fix' I saw was to ['*Setup Device Inputs*' and skip the Guide button assignment altogether](https://www.reddit.com/r/Steam/comments/11jfpmo/how_do_i_disable_xbox_button_launching_big/); pretty neat, but I've found that it borks the paddles on the Elite controllers. Plus I was a bit bored, and so that's how we ended up here.
 
 Love it or hate it Valve won't ever address the fact that people don't want Big Picture Mode and, when they ultimately change it again, targeting the SDL config directly will still work as it's how controllers are configured to work on Windows, not Steam!
 
