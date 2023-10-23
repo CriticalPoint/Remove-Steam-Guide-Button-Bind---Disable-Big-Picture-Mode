@@ -45,9 +45,9 @@
 <!-- What it does -->
 ## What does this actually do?
 
-Great question - You know when you're just minding your business, chilling and playing some games - your favourite tune comes on and you hit the Xbox Guide button to maybe access GameBar and BLAM - Steam Big Picture Jump Scare for NO REASON AT ALL! 😱 Well, this little script makes that shtiuff stop, immediatimmy.
+Great question - You know when you're just minding your business, chilling and playing some games - your favourite tune comes on and you hit the Xbox Guide button to maybe access GameBar and BLAM - Steam Big Picture Jump Scare for NO REASON AT ALL! 😱 Well, this little script makes that shtiuff stop, immediately.
 
-Any and all bindings to the guide button, no matter if you're on a Playstation, Xbox, Nintendo, hell, even a Megarive controller is stored within the config.vdf in your Steam config folder - this rips that binding, and ONLY that binding, out, for good, the easy way.
+Any and all bindings to the guide button, no matter if you're on a Playstation, Xbox, Nintendo, hell, even a MegaDrive controller is stored within the config.vdf in your Steam config folder - this rips that binding, and ONLY that binding, out, for good, the easy way.
 
 Sort of like, say, oh I don't know, how you'd think that turning off a giant button that says "Guide Button Focuses Steam" might work. Yeah, well, it doesn't. This does. Ex facto; end of.
 
@@ -106,7 +106,7 @@ Unless you're down with PS, understanding the script might be a challenge, so I'
 8 - Joins the lines back into a string
 9 - Saves the updated file contents to the output file (overwrite config.vdf) in your Steam\config DIR
 
-Granted it's a bit of a faff. I wanted to do it with non-greedy RegEx but it didn't cut it because of the lack of spacing arounf the "guide:b4," string.
+Granted it's a bit of a faff. I wanted to do it with non-greedy RegEx but it didn't cut it because of the lack of spacing around the "guide:b4," string.
 It's taken me all day to get here and so I look at it that as my first public PS script, I'm pretty darn proud of it!
 
 I'd be happy to learn a different way, how would you have done it?
