@@ -130,10 +130,10 @@ If you have a suggestion that would make this better then please, fork the repo 
 Don't forget to give the project a star! Thanks again!
 
 
-<!-- LICENSE -->
-## License
+<!-- Bugs -->
+## Issues and Bugs!
 
-Distributed under the Apache License. See `LICENSE.txt` for more information.
+🐛 Got a bug to report? Please, do so [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=)!
 
 
 <!-- CONTACT -->
@@ -143,6 +143,11 @@ Mike Page - Reach me on here if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button)
 
+
+<!-- LICENSE -->
+## License
+
+Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 #myFirstRepo
 
