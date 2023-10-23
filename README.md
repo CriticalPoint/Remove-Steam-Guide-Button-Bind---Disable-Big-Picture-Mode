@@ -46,7 +46,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the *Disable Steam Guide Button.ps1* script and, after reading on to see what it does, give it a run.
+If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the *Steam_Guide_Button_Disable - Default Steam install.ps1* script and, after reading on to see what it does, give it a run.
 
 If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still).
 
@@ -124,10 +124,11 @@ Granted, it's a bit of a faff and it's taken me all day but you couyld look at i
 
 
 <!-- Proof it works -->
-
-See the final Diff Check, minus all my personal info [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)_
+## Output/Changes to the file
 
 You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode/tree/main/diff%20check%20of%20config.vfd) folder
+
+See the final Diff Check (minus all my personal info) [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)
 
 
 <!-- CONTRIBUTING -->
@@ -143,7 +144,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
