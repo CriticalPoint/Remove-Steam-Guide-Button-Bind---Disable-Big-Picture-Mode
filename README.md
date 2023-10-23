@@ -42,6 +42,21 @@
   </p>
 </div>
 
+<!-- What it does -->
+## What does this actually do?
+
+Great question - You know when you're just minding your business, chilling and playing some games - your favourite tune comes on and you hit the Xbox Guide button to maybe access GameBar and BLAM - Steam Big Picture Jump Scare for NO REASON AT ALL! 😱 Well, this little script makes that shtiuff stop, immediatimmy.
+
+Any and all bindings to the guide button, no matter if you're on a Playstation, Xbox, Nintendo, hell, even a Megarive controller is stored within the config.vdf in your Steam config folder - this rips that binding, and ONLY that binding, out, for good, the easy way.
+
+Sort of like, say, oh I don't know, how you'd think that turning off a giant button that says "Guide Button Focuses Steam" might work. Yeah, well, it doesn't. This does. Ex facto; end of.
+
+All joking aside - there are some truly wonderful gamers out there that have shared fixes on various forums, the closest 'fix' I saw was to '*Setup Device Inputs*' and skip the Guide button assignment; pretty neat, but I've found that it borks the paddles on the Elite controllers. Plus I was a bit bored, and so that's how we ended up here.
+
+Love it or hate it Valve won't ever address the fact that people don't want Big Picture Mode and, when they ultimately change it again, targeting the SDL config directly will still work as it's how controllers are configured to work on Windows, not Steam!
+
+Enjoy! 🤜🏻🤛🏻
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -79,56 +94,30 @@ Supplied on the understanding that you've read about [execution policy](https://
 <!-- How it Works -->
 ## How It Works
 
-Unless you're down with PS, understanding it might be a challenge, so I've broken it down for you. Here's what it does...
+Unless you're down with PS, understanding the script might be a challenge, so I've added comment throughout the file, and broken it down here for you. Here's what it does...
 
-_Declares the file path variable_
-```
-$filePath = "C:\Program Files (x86)\Steam\config\config.vdf"
-```
-_Makes a Backup of your current config.vdf_
-```
-Copy-Item -Path $filePath -Destination "$filePath.backup"
-$i = 1
-while (Test-Path "$filePath.backup.$i") {
-    $i++
-}
-Rename-Item -Path "$filePath.backup" -NewName "$filePath.backup.$i"
-```
-_Read the file contents into a string_
-```
-$fileContents = Get-Content -Path $filePath
-```
-_Split the file contents into an array (Regex didn't cut it because, well, lack of text spacing!)_
-```
-$fileLines = $fileContents.Split([Environment]::NewLine)
-```
-_Create a new array to store the updated lines, and iterate through to remove the strings_
-```
-$updatedFileLines = @()
+1 - Declares the file path variable
+2 - Makes a Backup of your current config.vdf
+3 - Read the file contents into a string
+4 - Split the file contents into an array
+5 - Create a new array to store the updated lines
+6 - Iterates through to remove the strings
+7 - Add the updated file line to the new array
+8 - Joins the lines back into a string
+9 - Saves the updated file contents to the output file (overwrite config.vdf) in your Steam\config DIR
 
-foreach ($fileLine in $fileLines) {
-    $updatedFileLine = $fileLine.replace("guide:b0,", "").replace("guide:b1,", "").replace("guide:b2,", "").replace("guide:b3,", "").replace("guide:b4,", "").replace("guide:b5,", "").replace("guide:b6,", "").replace("guide:b7,", "").replace("guide:b8,", "").replace("guide:b9,", "").replace("guide:b10,", "")```
-```
-_Add the updated file line to the new array, and join the lines back into a string_
-```
-$updatedFileLines += $updatedFileLine
+Granted it's a bit of a faff. I wanted to do it with non-greedy RegEx but it didn't cut it because of the lack of spacing arounf the "guide:b4," string.
+It's taken me all day to get here and so I look at it that as my first public PS script, I'm pretty darn proud of it!
 
-$updatedFileContents = $updatedFileLines -join [Environment]::NewLine
-```
-_Save the updated file contents to the output file (overwrites config.vdf)_
-```
-Set-Content -Path $filePath -Value $updatedFileContents
-```
-
-Granted, it's a bit of a faff and it's taken me all day but you couyld look at it that it's my first PS script, so I'm pretty freakin' proud of that fact; I'mm willing to learn if anyone can tell me a better way to do it...
+I'd be happy to learn a different way, how would you have done it?
 
 
-<!-- Proof it works -->
-## Changes to the file - Output
+<!-- What Changes -->
+## Changes to the output file
 
-You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/tree/main/diff%20check%20of%20config.vfd) folder
+You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/tree/main/diff%20check%20of%20config.vfd) folder. before *before-config.vdf*, and *after-config.vdf*.
 
-See the final Diff Check (minus all my personal info) [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)
+The final Diff Check (minus all my personal info) is also available, here [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)
 
 
 <!-- CONTRIBUTING -->
