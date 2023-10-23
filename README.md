@@ -31,7 +31,7 @@
   </a>
   <br>
   <br>
-  <p align="center"></p>
+  <h1 align="center" style="color:red;">I've pulled the script for a moment as Steam is now acting up, just want to be safe</h1>
   <br>
   <br>
     <p align="center">
