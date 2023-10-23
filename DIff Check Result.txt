@@ -1,0 +1,3 @@
+Remove all Guide button binds (guide:bxx) from 'congif.vdf'
+
+https://www.diffchecker.com/TxvnAz0R/

@@ -1,0 +1,56 @@
+"InstallConfigStore"
+{
+	"SDL_GamepadBind"		"03000000de280000ff11000001000000,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:+a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:-a2,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
+03000000de280000ff11000000000000,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:+a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:-a2,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
+03000000de280000ff11000000007701,Steam Virtual Gamepad,a:b0,b:b1,back:b6,dpdown:b12,dpleft:b13,dpright:b11,dpup:b10,leftshoulder:b4,leftstick:b8,lefttrigger:a4,leftx:a1,lefty:a0~,rightshoulder:b5,rightstick:b9,righttrigger:a5,rightx:a3,righty:a2~,start:b7,x:b2,y:b3,platform:Windows,
+03005d085e040000000b000011056800,*,a:b0,b:b1,back:b4,dpdown:b12,dpleft:b13,dpright:b14,dpup:b11,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,start:b6,x:b2,y:b3,paddle1:b15,paddle2:b17,paddle3:b16,paddle4:b18,crc:085d,platform:Windows,
+030000005509000000b4000000007801,XInput Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
+030000005e040000000b000000007801,XInput Controller,crc:67fa,platform:Windows,a:b0,b:b1,x:b2,y:b3,dpleft:h0.8,dpright:h0.2,dpup:h0.1,dpdown:h0.4,leftx:a0,lefty:a1,leftstick:b8,rightx:a3,righty:a4,rightstick:b9,leftshoulder:b4,lefttrigger:-a2,rightshoulder:b5,righttrigger:a5,back:b6,start:b7,steam:1,
+
+	"streaming"
+	{
+		
+	}
+	"Music"
+	{
+		"LocalLibrary"
+		{
+			"Directories"
+			{
+
+			}
+		}
+	}
+	"WebStorage"
+	{
+
+	}
+	"UI"
+	{
+		"Window"
+		{
+			"sp"
+			{
+				"x"		"0"
+				"y"		"0"
+				"width"		"2560"
+				"height"		"1440"
+			}
+		}
+		"display"
+		{
+			"Current"
+			{
+				"MinScaleFactor"		"0.948683321475982666"
+				"MaxScaleFactor"		"2.84316229820251465"
+				"IsExternalDisplay"		"1"
+				"name"		"External: Q32G3WG3R3|||Fullscreen-2560x1440"
+				"AutoScaleFactor"		"1.89736664295196533"
+			}
+		}
+	}
+	"BigPicture"
+	{
+		"Monitor"		"\\\\.\\DISPLAY1"
+	}
+}
