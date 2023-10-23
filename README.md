@@ -120,9 +120,14 @@ _Save the updated file contents to the output file (overwrites config.vdf)_
 Set-Content -Path $filePath -Value $updatedFileContents
 ```
 
-Granted, it's a bit of a faff and it's taken me all day but you couyld look at it that it's my first PS script, so I'm pretty freakin' proud of that fact; I'mm willing to learn if anyone can tell me a better way to do this?
+Granted, it's a bit of a faff and it's taken me all day but you couyld look at it that it's my first PS script, so I'm pretty freakin' proud of that fact; I'mm willing to learn if anyone can tell me a better way to do it...
 
-_The proof is in the pudding, see the final Diff Check (minus personal info) [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)_
+
+<!-- Proof it works -->
+
+See the final Diff Check, minus all my personal info [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)_
+
+You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode/tree/main/diff%20check%20of%20config.vfd) folder
 
 
 <!-- CONTRIBUTING -->
@@ -144,7 +149,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Mike Page (Sorry, I don't Twitter) - Comment on here if you want to reach me! 👍🏻
+Mike Page - Reach me on here if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode)
 
