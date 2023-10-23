@@ -45,9 +45,9 @@
 <!-- What it does -->
 ## What does this actually do?
 
-Great question - You know when you're just minding your business, chilling and playing some games - your favourite tune comes on and you hit the Xbox Guide button to maybe access GameBar and BLAM - Steam Big Picture Jump Scare for NO REASON AT ALL! 😱 Well, this little script makes that shtiuff stop, immediatimmy.
+Great question - You know when you're just minding your business, chilling and playing some games - your favourite tune comes on and you hit the Xbox Guide button to maybe access GameBar and BLAM - Steam Big Picture Jump Scare for NO REASON AT ALL! 😱 Well, this little script makes that shtiuff stop, immediately.
 
-Any and all bindings to the guide button, no matter if you're on a Playstation, Xbox, Nintendo, hell, even a Megarive controller is stored within the config.vdf in your Steam config folder - this rips that binding, and ONLY that binding, out, for good, the easy way.
+Any and all bindings to the guide button, no matter if you're on a Playstation, Xbox, Nintendo, hell, even a MegaDrive controller is stored within the config.vdf in your Steam config folder - this rips that binding, and ONLY that binding, out, for good, the easy way.
 
 Sort of like, say, oh I don't know, how you'd think that turning off a giant button that says "Guide Button Focuses Steam" might work. Yeah, well, it doesn't. This does. Ex facto; end of.
 
@@ -63,7 +63,7 @@ Enjoy! 🤜🏻🤛🏻
 
 If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the [Steam_Guide_Button_Disable - Default Steam install.ps1](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Steam_Guide_Button_Disable%20-%20Default%20Steam%20install.ps1) script and, after reading on to see what it does, give it a run.
 
-If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still).
+If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still) - watch this space.
 
 
 <!-- PREREQUISITES -->
@@ -106,7 +106,7 @@ Unless you're down with PS, understanding the script might be a challenge, so I'
 8 - Joins the lines back into a string
 9 - Saves the updated file contents to the output file (overwrite config.vdf) in your Steam\config DIR
 
-Granted it's a bit of a faff. I wanted to do it with non-greedy RegEx but it didn't cut it because of the lack of spacing arounf the "guide:b4," string.
+Granted it's a bit of a faff. I wanted to do it with non-greedy RegEx but it didn't cut it because of the lack of spacing around the "guide:b4," string.
 It's taken me all day to get here and so I look at it that as my first public PS script, I'm pretty darn proud of it!
 
 I'd be happy to learn a different way, how would you have done it?
@@ -130,10 +130,10 @@ If you have a suggestion that would make this better then please, fork the repo 
 Don't forget to give the project a star! Thanks again!
 
 
-<!-- LICENSE -->
-## License
+<!-- Bugs -->
+## Issues and Bugs!
 
-Distributed under the Apache License. See `LICENSE.txt` for more information.
+🐛 Got a bug to report? Please, do so [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=)!
 
 
 <!-- CONTACT -->
@@ -143,6 +143,11 @@ Mike Page - Reach me on here if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button)
 
+
+<!-- LICENSE -->
+## License
+
+Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 #myFirstRepo
 
