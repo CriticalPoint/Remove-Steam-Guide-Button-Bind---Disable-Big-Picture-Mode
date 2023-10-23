@@ -96,18 +96,18 @@ Supplied on the understanding that you've read about [execution policy](https://
 
 Unless you're down with PS, understanding the script might be a challenge, so I've added comment throughout the file, and broken it down here for you. Here's what it does...
 
-# 1 - Declare the file path variable
-# 2 - Make a Backup of current config.vdf
-# 3 - Read the file contents into a string (see below as to why, Regex fail)
-# 4 - Split the file contents into an array of lines
-# 5 - Create a new array to store the updated file lines
-# 6 - Create a variable to store the number of strings deleted
-# 7 - Iterate over the file lines and remove the strings
-# 8 - Increment the number of strings deleted if different from original
-# 9 - Add the updated file line to the new array
-# 10 - Join the updated file lines back into a string
-# 11 - Save the updated file contents to the output file
-# 12 - Output the number of strings deleted to the console
+1 - Declare the file path variable
+2 - Make a Backup of current config.vdf
+3 - Read the file contents into a string (see below as to why, Regex fail)
+4 - Split the file contents into an array of lines
+5 - Create a new array to store the updated file lines
+6 - Create a variable to store the number of strings deleted
+7 - Iterate over the file lines and remove the strings
+8 - Increment the number of strings deleted if different from original
+9 - Add the updated file line to the new array
+10 - Join the updated file lines back into a string
+11 - Save the updated file contents to the output file
+12 - Output the number of strings deleted to the console
 
 Granted it's a bit of a faff. I wanted to do it with non-greedy RegEx but it didn't cut it because of the lack of spacing around the "guide:b4," string.
 It's taken me all day to get here and so I look at it that as my first public PS script, I'm pretty darn proud of it!
