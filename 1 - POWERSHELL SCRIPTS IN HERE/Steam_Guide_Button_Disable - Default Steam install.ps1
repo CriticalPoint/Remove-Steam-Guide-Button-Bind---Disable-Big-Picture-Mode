@@ -23,7 +23,7 @@ $numberOfStringsDeleted = 0
 
 # 7 - Iterate over the file lines and remove the strings
 foreach ($fileLine in $fileLines) {
-  $updatedFileLine = $fileLine.replace("guide:b0,", "").replace("guide:b1,", "").replace("guide:b2,", "").replace("guide:b3,", "").replace("guide:b4,", "").replace("guide:b5,", "").replace("guide:b6,", "").replace("guide:b7,", "").replace("guide:b8,", "").replace("guide:b9,", "").replace("guide:b10,", "")
+  $updatedFileLine = $fileLine.replace("guide:b0,", "").replace("guide:b1,", "").replace("guide:b2,", "").replace("guide:b3,", "").replace("guide:b4,", "").replace("guide:b5,", "").replace("guide:b6,", "").replace("guide:b7,", "").replace("guide:b8,", "").replace("guide:b9,", "").replace("guide:b10,", "").replace("guide:b11,", "").replace("guide:b12,", "").replace("guide:b13,", "").replace("guide:b14,", "").replace("guide:b15,", "").replace("guide:b16,", "").replace("guide:b17,", "").replace("guide:b18,", "").replace("guide:b19,", "").replace("guide:b20,", "")
 
   # 8 - Increment the number of strings deleted variable if the updated file line is different from the original file line
   if ($fileLine -ne $updatedFileLine) {
