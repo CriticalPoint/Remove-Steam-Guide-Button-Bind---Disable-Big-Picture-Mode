@@ -26,7 +26,7 @@
 
 <div align="center">
   <h3 align="center">Steam Big Picture Mode + XBox Controller with Xbox Extended Feature Support enabled</h3>
-  <a href="[https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode?readme=1#readme-top)">
+  <a href="[https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button?readme=1#readme-top)">
     <img src="images/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode'" width="397" height="224">
   </a>
   <br>
@@ -46,7 +46,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the [Steam_Guide_Button_Disable - Default Steam install.ps1](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Steam_Guide_Button_Disable%20-%20Default%20Steam%20install.ps1) script and, after reading on to see what it does, give it a run.
+If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the [Steam_Guide_Button_Disable - Default Steam install.ps1](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Steam_Guide_Button_Disable%20-%20Default%20Steam%20install.ps1) script and, after reading on to see what it does, give it a run.
 
 If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still).
 
@@ -124,9 +124,9 @@ Granted, it's a bit of a faff and it's taken me all day but you couyld look at i
 
 
 <!-- Proof it works -->
-## Output/Changes to the file
+## Changes to the file - Output
 
-You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode/tree/main/diff%20check%20of%20config.vfd) folder
+You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/tree/main/diff%20check%20of%20config.vfd) folder
 
 See the final Diff Check (minus all my personal info) [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)
 
@@ -152,7 +152,7 @@ Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 Mike Page - Reach me on here if you need me! 👍🏻
 
-Project Link: [CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode](https://github.com/CriticalPoint/Xbox-Guide-Steam-Big-Picture-Mode)
+Project Link: [CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button)
 
 
 #myFirstRepo
