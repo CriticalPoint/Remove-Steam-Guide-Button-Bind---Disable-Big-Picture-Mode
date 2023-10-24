@@ -56,7 +56,7 @@ You've tried to disable it, you've toggled different things off, then on, back t
 
 ..."*Why isn't it working, what am I doing wrong?*". Nothing, young Padawan, you're doing absolutely nothing wrong, at all. You've been set-up to fail, you're playing an unwinnable game against, an invisible competitor. It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't. Well, this does.
 
-<img src="images/Xbox_Steam_Logo-small.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
+<img align="center" src="images/GuideButtonDoes-Not-NotFocusSteam.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
 "*How?*" another good one - It removes all Steam bindings to your guide button. It doesn't matter which controller you're using; PlayStation, Xbox, Nintendo, aftermarket, off-brand or otherwise - the Guide button on your controller will no longer be bound (in Steam), and so it cannot jump-scare you, after running this file.
 
