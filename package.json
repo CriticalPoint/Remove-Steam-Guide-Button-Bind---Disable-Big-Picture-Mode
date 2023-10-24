@@ -1,18 +1,21 @@
 {
-  "sideEffects": false,
-  "name": "Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button",
-  "description": "Any and all bindings to the guide button, no matter if you're on a Playstation, Xbox, Nintendo, hell, even a MegaDrive controller is stored within the config.vdf in your Steam config folder - this rips that binding, and ONLY that binding, out, for good, the easy way",
-  "version": "0.1.0",
-  "homepage": "https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button",
-  "license": "Apache License 2.0",
+  "name": "Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode",
+  "version": "1.0.0",
+  "description": "Removes any and all Steam bindings to your guide button, no matter the controller",
+  "main": "Guide Unbind - Default Steam Install Location.ps1",
+  "homepage": "https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode",
+  "license": "MIT Licence",
   "bugs": {
-    "url": "https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues"
+    "url": "https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues"
   },
   "author": {
     "name": "Mike Page",
     "url": "https://github.com/CriticalPoint"
   },
   "dependencies": {
-    "powershell": ">7"
+    "powershell": ">7.0"
+  },
+  "scripts": {
+    "start": "powershell Guide Unbind - Default Steam Install Location.ps1"
   }
 }
