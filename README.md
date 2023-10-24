@@ -31,9 +31,11 @@
   </a>
   <br>
   <br>
+  <!--
   <h1 align="center" style="color:red;">I've pulled the script for a moment as Steam is now acting up, just want to be safe</h1>
   <br>
   <br>
+  -->
     <p align="center">
     Annoyed by Steam and their enforcing Big Picture Mode when I press my Xbox Guide button - **as you may be, since you're here**, I decided to come up with a script that will 'just work' when run on your Windows PC.
     <br>
