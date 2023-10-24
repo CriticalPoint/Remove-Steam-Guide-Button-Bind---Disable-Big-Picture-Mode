@@ -66,7 +66,7 @@ Love it or hate it, Valve won't ever address the fact that people don't want Big
 
 🐛 Got a bug to report? Please do so [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=), otherwise I can't improve upon it!
 
-<p align="left">The software is provided as-is, and it's up to you if you choose to use it. I invite you to <a href="#disclaimer">read the discalimer</a></p>
+<p align="left">The software is provided as-is, and it's up to you if you choose to use it. I invite you to <a href="#disclaimer">read the discalimer</a>.</p>
 
 Enjoy! 🤜🏻🤛🏻
 
