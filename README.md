@@ -25,40 +25,48 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <h3 align="center">Steam Big Picture Mode + XBox Controller with Xbox Extended Feature Support enabled</h3>
+  <h3 align="center">Stop Steam JUMP SCARE when pressing Guide on your controller and being forced to Big Picture Mode (BPM)</h3>
   <a href="[https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button?readme=1#readme-top)">
-    <img src="images/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode'" width="397" height="224">
+    <img src="images/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode' written accross them" width="397" height="224">
   </a>
   <br>
   <br>
   <!--
-  <h1 align="center" style="color:red;">I've pulled the script for a moment as Steam is now acting up, just want to be safe</h1>
+  <h1 align="center" style="color:red;">Script temporarally offline - please be patient while I investigate a potential issue - just want to be sure</h1>
   <br>
   <br>
   -->
     <p align="center">
-    Annoyed by Steam and their enforcing Big Picture Mode when I press my Xbox Guide button - **as you may be, since you're here**, I decided to come up with a script that will 'just work' when run on your Windows PC.
+    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be since you're here), I've made a script to disable it that will 'just work' on your Windows PC.
     <br>
     <br>
-    I've pulled it apart, analysed, changed and compiled it into something that, hopefully, everyone can make use of - but how could I be sure you'd trust that it is what it says it is, and that it would actually get used?
+    I've pulled the Steam config apart, analysed it, changed it, tested it and finally arrived at something that everyone can make use of - a Powershell script that removes guide button binding at boot.
     <br>
     <br>
-    Cue; my first GitHub repo - where you can explore code before running it, and transparently see what it does - Yeeha!
+    Unsure anyone would trust spurious code on Valve forums and Reddit, I've put together #myFirstRepo - explore the code, decide if it's for you, ask questions, fork it, chop it, poke it, chew it up and/or spit it out - it's yours to do with what you will.
   </p>
 </div>
 
 <!-- What it does -->
 ## What does this actually do?
 
-Great question - You know when you're just minding your business, chilling and playing some games - your favourite tune comes on and you hit the Xbox Guide button to maybe access GameBar and BLAM - Steam Big Picture Jump Scare for NO REASON AT ALL! 😱 Well, this little script makes that shtiuff stop, immediately.
+Great question - You know when you're just playing games, minding your business, listening to music and the like - you press your Guide button to access Gamebar and BAM - Big Picture Mode out of nowhere and for seemingly NO REASON 😱
 
-Any and all bindings to the guide button, no matter if you're on a Playstation, Xbox, Nintendo, hell, even a MegaDrive controller is stored within the config.vdf in your Steam config folder - this rips that binding, and ONLY that binding, out, for good, the easy way.
+You've tried to disable it, you've toggled different things off, then on, back to off, you're getting nowhere and you're now wondering if you can somehow get them to stop sort of half-way between on and off. You've done this some twenty-odd times now and it's still not working...
 
-Sort of like, say, oh I don't know, how you'd think that turning off a giant button that says "Guide Button Focuses Steam" might work. Yeah, well, it doesn't. This does. Ex facto; end of.
+..."*Why isn't it working, what am I doing wrong?*". Nothing, young Padawan, you'te doing absolutley nothing wrong, at all. You''ve been set-up to fail, you're playing an unwinnable game against, an invisible competitor. It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide Button Focuses Steam", might actually work because, well, no, it doesn't. Well, this does.
 
-All joking aside - there are some truly wonderful gamers out there that have shared fixes on various forums, the closest 'fix' I saw was to ['*Setup Device Inputs*' and skip the Guide button assignment altogether](https://www.reddit.com/r/Steam/comments/11jfpmo/how_do_i_disable_xbox_button_launching_big/); pretty neat, but I've found that it borks the paddles on the Elite controllers. Plus I was a bit bored, and so that's how we ended up here.
+"*How?*" another good one - It removes all Steam bindings to your guide button. It doesn't matter which controller you're using; Playstation, Xbox, Nintendo, aftermarket, off-brand or otherwise - the Guide button on your controller will no longer be bound (in Steam), and so it cannot jump-scare you, after running this file.
 
-Love it or hate it Valve won't ever address the fact that people don't want Big Picture Mode and, when they ultimately change it again, targeting the SDL config directly will still work as it's how controllers are configured to work on Windows, not Steam!
+**Everything else is unaffected, Gamebar will still work as normal - it's just the Guide button that is unmapped from within Steam**
+
+There are some truly wonderful gamers out there that have shared various fixes on forums - the closest I found was to run ['*Setup Device Inputs*' and skip the Guide button assignment altogether](https://www.reddit.com/r/Steam/comments/11jfpmo/how_do_i_disable_xbox_button_launching_big/), which is a pretty neat workaround, but I thought we could all benefit from a script. Plus I was a bit bored, and that's how we ended up here.
+
+Love it or hate it, Valve won't ever address the fact that people don't want Big Picture Mode on their Guide button. By targeting the SDL config directly ('*guide*' is a non-Steam assignment, so the reference won't be changed [why, oh why did I just say that 😶]), means that this method should still work after various client updates and the like. It targets how controllers are configured to work on Windows, non-specific to Steam.
+
+🐛 Got a bug to report? Please do so [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=), otherwise I can't improve upon it!
+
+<p align="left">The software is provided as-is, and it's up to you if you choose to use it. I invite you to (<a href="#disclaimer">read the discalimer</a>)</p>.
 
 Enjoy! 🤜🏻🤛🏻
 
@@ -152,13 +160,19 @@ Don't forget to give the project a star! Thanks again!
 <!-- Bugs -->
 ## Issues and Bugs!
 
-🐛 Got a bug to report? Please, do so [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=)!
+🐛 Got a bug? Please report it [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=) so that I may improve upon the script(s)!
+
+
+<!-- Disclaimer-->
+## DISCLAIMER
+<a name="disclaimer"></a>
+This software is provided as-is and, although I have tested it on my machine, a couple of test VM's, in Windows Sandbox, and on my unsuspecting mates' PC, I'm afraid that I cannot accept any liability for 'damages', howsoever caused. Please understand that by using this software you do so at your own risk, and that constitutes your acceptance of the fact that I am not responsible for anything that has happened in the past by not using it, anything that may happen as a result of using it now, or by either using it, or not, in future. I have only invited you to understand what it is that I am offering - it's up to you if you choose to use it 🙏🏻
 
 
 <!-- CONTACT -->
 ## Contact
 
-Mike Page - Reach me on here if you need me! 👍🏻
+Reach me via Discussions, if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button)
 
@@ -168,6 +182,5 @@ Project Link: [CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-
 
 Distributed under the Apache License. See `LICENSE.txt` for more information.
 
-#myFirstRepo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
