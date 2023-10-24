@@ -26,7 +26,7 @@
 
 <div align="center">
   <h3 align="center">Stop Steam JUMP SCARE when pressing Guide on your controller and being forced to Big Picture Mode (BPM)</h3>
-  <a href="[https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button?readme=1#readme-top)">
+  <a href="[https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode?readme=1#readme-top)">
     <img src="images/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode' written accross them" width="397" height="224">
   </a>
   <br>
@@ -64,7 +64,7 @@ There are some truly wonderful gamers out there that have shared various fixes o
 
 Love it or hate it, Valve won't ever address the fact that people don't want Big Picture Mode on their Guide button. By targeting the SDL config directly ('*guide*' is a non-Steam assignment, so the reference won't be changed [why, oh why did I just say that 😶]), means that this method should still work after various client updates and the like. It targets how controllers are configured to work on Windows, non-specific to Steam.
 
-🐛 Got a bug to report? Please do so [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=), otherwise I can't improve upon it!
+🐛 Got a bug to report? Please do so [here](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=), otherwise I can't improve upon it!
 
 <p align="left">The software is provided as-is, and it's up to you if you choose to use it. I invite you to <a href="#disclaimer">read the discalimer</a>.</p>
 
@@ -74,7 +74,7 @@ Enjoy! 🤜🏻🤛🏻
 <!-- GETTING STARTED -->
 ## Getting Started
 
-If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", then you can just grab the [Steam_Guide_Button_Disable - Default Steam install.ps1](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Steam_Guide_Button_Disable%20-%20Default%20Steam%20install.ps1) script and, after reading on to see what it does, give it a run.
+If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", you can go ahead and grab the [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Steam_Guide_Button_Disable%20-%20Default%20Steam%20install.ps1) script and, after reading on to see what it does, give it a run.
 
 If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still) - watch this space.
 
@@ -107,33 +107,25 @@ Supplied on the understanding that you've read about [execution policy](https://
 <!-- How it Works -->
 ## How It Works
 
-Unless you're down with PS, understanding the script might be a challenge, so I've added comment throughout the file, and broken it down here for you. Here's what it does...
+Unless you're overally familiar with Powershell, understanding the script itself may pose a small challenge. To that end, I've added comments throughout the file, which correlateto this list.
 
-1 - Declare the file path variable
+Here's what it does, step-by-step.
 
-2 - Make a Backup of current config.vdf
+1 - Checks your PowerShell version (>7.0 required)
+2 - Declares the file path to your Steam install directory (default location)
+3 - Makes a Backup of config.vdf > config.vdf.BACKUP.1 > config.vdf.BACKUP.2, etc
+4 - Read the file contents to string
+5 - Splits the contents into an array
+6 - Creates a new array to store the updated lines
+7 - Creates a variable to store the number of strings deleted
+8 - Iterates through the lines to remove the binds
+9 - Increments the 'number of strings deleted' variable, if different to original
+10 - Adds the updated lines to the new array
+11 - Joins them back into a string
+12 - Saves the updated file content to the output file (config.vdf)
+13 - Outputs (to the console) the number of binds that have been deleted (verification)
 
-3 - Read the file contents into a string (see below as to why, Regex fail)
-
-4 - Split the file contents into an array of lines
-
-5 - Create a new array to store the updated file lines
-
-6 - Create a variable to store the number of strings deleted
-
-7 - Iterate over the file lines and remove the strings
-
-8 - Increment the number of strings deleted if different from original
-
-9 - Add the updated file line to the new array
-
-10 - Join the updated file lines back into a string
-
-11 - Save the updated file contents to the output file
-
-12 - Output the number of strings deleted to the console
-
-Granted it's a bit of a faff. I wanted to do it with non-greedy RegEx but it didn't cut it because of the lack of spacing around the "guide:b4," string.
+I initally wanted to do this with RegEx (non-greedy), but it didn't cut it because of the lack of spacing around the "guide:b4," string.
 It's taken me all day to get here and so I look at it that as my first public PS script, I'm pretty darn proud of it!
 
 I'd be happy to learn a different way, how would you have done it?
@@ -142,7 +134,7 @@ I'd be happy to learn a different way, how would you have done it?
 <!-- What Changes -->
 ## Changes to the output file
 
-You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/tree/main/diff%20check%20of%20config.vfd) folder. before *before-config.vdf*, and *after-config.vdf*.
+You'll find both copies of the config.vfd in the [diff check of config.vfd](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/tree/main/diff%20check%20of%20config.vfd) folder. before *before-config.vdf*, and *after-config.vdf*.
 
 The final Diff Check (minus all my personal info) is also available, here [Remove all Guide button binds (guide:bxx) from 'congif.vdf'](https://www.diffchecker.com/TxvnAz0R/)
 
@@ -160,13 +152,13 @@ Don't forget to give the project a star! Thanks again!
 <!-- Bugs -->
 ## Issues and Bugs!
 
-🐛 Got a bug? Please report it [here](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=) so that I may improve upon the script(s)!
+🐛 Got a bug? Please report it [here](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=) so that I may improve upon the script(s)!
 
 
 <!-- Disclaimer-->
 ## DISCLAIMER
 <a name="disclaimer"></a>
-This software is provided as-is and, although I have tested it on my machine, a couple of test VM's, in Windows Sandbox, and on my unsuspecting mates' PC, I'm afraid that I cannot accept any liability for 'damages', howsoever caused. Please understand that by using this software you do so at your own risk, and that constitutes your acceptance of the fact that I am not responsible for anything that has happened in the past by not using it, anything that may happen as a result of using it now, or by either using it, or not, in future. I have only invited you to understand what it is that I am offering - it's up to you if you choose to use it 🙏🏻
+This software is provided as-is and, although I have tested it on my machine, a couple of test VM's, in Windows Sandbox, and on my unsuspecting mates' PC, I'm afraid that I cannot accept any liability for 'damages', howsoever caused. Please understand that by using this software you do so at your own risk, and that constitutes your acceptance of the fact that I am not responsible for anything that has happened in the past by not using it, anything that may happen as a result of using it now, or by either using it, or not, in future - it's ultimately up to you if you choose to use it 🙏🏻
 
 
 <!-- CONTACT -->
@@ -174,13 +166,13 @@ This software is provided as-is and, although I have tested it on my machine, a 
 
 Reach me via Discussions, if you need me! 👍🏻
 
-Project Link: [CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button](https://github.com/CriticalPoint/Automatically-Disable-Steam-Big-Picture-Mode-Guide-Button)
+Project Link: [CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode)
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the Apache License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
