@@ -54,7 +54,9 @@ Great question - You know when you're just playing games, minding your business,
 
 You've tried to disable it, you've toggled different things off, then on, back to off, you're getting nowhere and you're now wondering if you can somehow get them to stop sort of half-way between on and off. You've done this some twenty-odd times now and it's still not working...
 
-..."*Why isn't it working, what am I doing wrong?*". Nothing, young Padawan, you're doing absolutely nothing wrong, at all. You've been set-up to fail, you're playing an unwinnable game against, an invisible competitor. It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide Button Focuses Steam", might actually work because, well, no, it doesn't. Well, this does.
+..."*Why isn't it working, what am I doing wrong?*". Nothing, young Padawan, you're doing absolutely nothing wrong, at all. You've been set-up to fail, you're playing an unwinnable game against, an invisible competitor. It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't. Well, this does.
+
+<img src="images/Xbox_Steam_Logo-small.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
 "*How?*" another good one - It removes all Steam bindings to your guide button. It doesn't matter which controller you're using; PlayStation, Xbox, Nintendo, aftermarket, off-brand or otherwise - the Guide button on your controller will no longer be bound (in Steam), and so it cannot jump-scare you, after running this file.
 
@@ -70,12 +72,14 @@ Love it or hate it, Valve won't ever address the fact that people don't want Big
 
 Enjoy! 🤜🏻🤛🏻
 
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
 If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", you can go ahead and grab the [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1) script and, after reading on to see what it does, give it a run.
 
 If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still) - watch this space.
+
 
 <!-- PREREQUISITES -->
 ## Prerequisites
@@ -89,6 +93,7 @@ $PSVersionTable
 ```
 If not, see [Installing PowerShell on Windows](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
 
+
 <!-- USAGE -->
 ## Usage
 
@@ -99,6 +104,7 @@ TL:DR - _Set-ExecutionPolicy Unrestricted_
 Supplied on the understanding that you've read about [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3)
 
 **Use with caution**
+
 
 <!-- How it Works -->
 ## How It Works
@@ -126,21 +132,24 @@ It's taken me all day to get here and so I look at it that as my first public PS
 
 I'd be happy to learn a different way, how would you have done it?
 
+
 <!-- What Changes -->
 ## Changes to the output file
 
-You'll find both copies of the config.vdf in the [diff check of config.vfd](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/tree/main/diff%20check%20of%20config.vfd) folder. before *before-config.vdf*, and *after-config.vdf*.
+You'll find both copies of the config.vdf in the [diff check of config.vfd](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/tree/main/diff%20check%20of%20config.vfd) folder - *before-config.vdf*, and *after-config.vdf*.
 
 The final Diff Check (minus all my personal info) is also available, here [Remove all Guide button binds (guide:bxx) from 'config.vdf'](https://www.diffchecker.com/TxvnAz0R/)
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are more than welcome, and **greatly appreciated**.
 
-If you have a suggestion that would make this better then please, fork the repo and create a pull request. You can also open an issue with the "enhancement" tag, whatever works for you.
+If you have a suggestion that would make this Repo better then please do contribute by either forking the repo and creating a pull request, joining in with [discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions), or opening an issue with the "enhancement" tag - whatever works for you 🙏🏻
 
 Don't forget to give the project a star! Thanks again!
+
 
 <!-- Bugs -->
 ## Issues and Bugs!
@@ -152,12 +161,14 @@ Don't forget to give the project a star! Thanks again!
 <a name="disclaimer"></a>
 This software is provided as-is and, although I have tested it on my machine, a couple of test VM's, in Windows Sandbox, and on my unsuspecting mates' PC, I'm afraid that I cannot accept any liability for 'damages', howsoever caused. Please understand that by using this software you do so at your own risk, and that constitutes your acceptance of the fact that I am not responsible for anything that has happened in the past by not using it, anything that may happen as a result of using it now, or by either using it, or not, in future - it's ultimately up to you if you choose to use it 🙏🏻
 
+
 <!-- CONTACT -->
 ## Contact
 
 Reach me via Discussions, if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode)
+
 
 <!-- LICENSE -->
 ## License
