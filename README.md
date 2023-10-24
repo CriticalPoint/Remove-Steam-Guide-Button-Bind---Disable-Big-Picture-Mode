@@ -54,7 +54,7 @@ Great question - You know when you're just playing games, minding your business,
 
 You've tried to disable it, you've toggled different things off, then on, back to off, you're getting nowhere and you're now wondering if you can somehow get them to stop sort of half-way between on and off. You've done this some twenty-odd times now and it's still not working...
 
-..."*Why isn't it working, what am I doing wrong?*". Nothing, young Padawan, you're doing absolutely nothing wrong, at all. You've been set-up to fail, you're playing an unwinnable game against, an invisible competitor. It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't. Well, this does.
+..."*Why isn't it working, what am I doing wrong?*". Nothing, young Padawan, you're doing absolutely nothing wrong, at all. You've been set-up to fail, you're playing an unwinnable game against, an invisible competitor. It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't.
 
 <img align="center" src="images/GuideButtonDoes-Not-NotFocusSteam.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
@@ -76,9 +76,9 @@ Enjoy! 🤜🏻🤛🏻
 <!-- GETTING STARTED -->
 ## Getting Started
 
-If your Steam directory is the default "**C:\Program Files (x86)\Steam\**", you can go ahead and grab the [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1) script and, after reading on to see what it does, give it a run.
+If your Steam directory is the default ```C:\Program Files (x86)\Steam\``` then you can go right ahead and grab the [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1) PowerShell script and, after reading on to see what it does, set it up as a scheduled task (automation for this to follow).
 
-If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still) - watch this space.
+If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still. Automation for this to follow, too).
 
 
 <!-- PREREQUISITES -->
