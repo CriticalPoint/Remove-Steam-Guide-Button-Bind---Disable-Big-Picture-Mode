@@ -48,7 +48,7 @@
 </div>
 
 <!-- What it does -->
-## What does this actually do?
+# What does this actually do?
 
 You press your Guide button to access Xbox Game Bar (for example) and BAM, Big Picture Mode from nowhere.
 
@@ -59,7 +59,7 @@ You've been set-up to fail as Steam re-maps that button at launch and again at e
 It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't.
 <img align="center" src="images/GuideButtonDoes-Not-NotFocusSteam.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
-## How does it work?
+# How does it work?
 Targeting the SDL config directly ('*guide*' is a non-Steam assignment, so it's unlikely to ever change), the script removes all bindings (from all controllers) in your settings.
 It doesn't matter if you're using a PlayStation, Xbox, Nintendo, aftermarket, off-brand, or other controller - the Guide button will no longer be bound (in Steam) after this file has been run.
 
@@ -69,7 +69,7 @@ Love it or hate it, I don't think that Valve will ever address the fact that peo
 
 
 <!-- PREREQUISITES -->
-## Prerequisites
+# Prerequisites
 
 You'll need PowerShell (>v7) to use this script. To check, open up PowerShell and run the below to find your version:
 ```
@@ -79,7 +79,7 @@ If you don't have PowerShell 7, see [Installing PowerShell on Windows](https://l
 
 
 <!-- USAGE -->
-## Usage
+# Usage
 ## If your Steam directory is ```C:\Program Files (x86)\Steam\``` (default)
 Go ahead and grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20PS%20SCRIPTS/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1).
 
@@ -93,14 +93,18 @@ You will need to **edit the file to include your path**, at least until I write 
 ## Automation
 This will run the script four seconds after Steam fires up (so after the button is remapped by Steam).
 
-You'll need:
-- to configure a **Scheduled Task**
-- to enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), 'Success', as a Security Policy.
-- Update the following tags in the script to match your own - `<Author>` `<UserId>` `<Arguments>`
+You'll need to:
+- Configure a *Scheduled Task*
+- Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting an audit 'Success' flag in the Security Policy.
 - Either be an admin, or stipulate an admin account for the task to run.
+- Update the following tags, to match your own:
+  - `<Author>` - 
+  - `<UserId>` - To get your S-1-... `<UserId>`, open a Command Prompt and type `wmic useraccount get name,sid`
+  - `<Arguments>` - 
 
 
-<h4>The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)</h4>
+
+### The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)
 
 ```
 <QueryList>
@@ -114,7 +118,7 @@ You'll need:
 </QueryList>
 ```
 
-<h4>The Action (*TS/Actions* > *Start a Program*)</h4>
+### The Action (*TS/Actions* > *Start a Program*)
 
 Program/Script:   [code]pwsh[/code]
 Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"[/code]
@@ -132,7 +136,7 @@ Specify additional settings that affect the behavior of the task.
 ⬛ If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
 ✅ If the task is already running, then the following rule applies: *Stop the existing instance*
 
-A full set of reference screenshots are available - [General](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/General.png) - [Triggers](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Triggers.png) - [Actions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Actions.png) - [Conditions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Conditions.png) - [Settings](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Settings.png)
+A full set of reference screenshots are available - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
 
 <!-- What Changes -->
 ## Changes to the output file
