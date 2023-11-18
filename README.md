@@ -122,6 +122,7 @@ Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\P
 
 The Settings (Almost all options are checked)
 Specify additional settings that affect the behavior of the task.
+
 [list]
 [*]✅ Allow task to be run on demand
 [*]✅ Run task as soon as possible after a scheduled start is missed
@@ -132,6 +133,7 @@ Specify additional settings that affect the behavior of the task.
 [*]⬛ If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
 [*]✅ If the task is already running, then the following rule applies: *Stop the existing instance*
 [/list]
+
 A full set of reference screenshots are available - [General](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/General.png) - [Triggers](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Triggers.png) - [Actions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Actions.png) - [Conditions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Conditions.png) - [Settings](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Settings.png)
 
 <!-- What Changes -->
