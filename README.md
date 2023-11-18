@@ -154,6 +154,11 @@ Specify these additional settings, not that *almost* but not all of the options 
 
 A full set of reference screenshots are available - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
 
+### Save!
+
+You can verify the success of this by first disabling the Task and testing your Guide button in Steam. It should enter BPM.
+Now exit Steam, reenable the Task you just created a, opening Steam and testing again. BPM should be fully disabled. If for whatever reason it is not, please either [Raise an Issue](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues), or drop by [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions)
+
 
 
 <!-- What Changes -->
@@ -193,7 +198,7 @@ This software is provided as-is and, although I have tested it on my machine, a 
 <!-- CONTACT -->
 ## Contact
 
-Reach me via Discussions, if you need me! 👍🏻
+Reach me via [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions), if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode)
 
