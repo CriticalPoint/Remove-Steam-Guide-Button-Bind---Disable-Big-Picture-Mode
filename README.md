@@ -47,8 +47,11 @@
   </p>
 </div>
 
+
+
+
 <!-- What it does -->
-# What does this actually do?
+# What it does
 
 You press your Guide button to access Xbox Game Bar (for example) and BAM, Big Picture Mode from nowhere.
 
@@ -59,13 +62,13 @@ You've been set-up to fail as Steam re-maps that button at launch and again at e
 It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't.
 <img align="center" src="images/GuideButtonDoes-Not-NotFocusSteam.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
-# How does it work?
+# How is does it
 Targeting the SDL config directly ('*guide*' is a non-Steam assignment, so it's unlikely to ever change), the script removes all bindings (from all controllers) in your settings.
 It doesn't matter if you're using a PlayStation, Xbox, Nintendo, aftermarket, off-brand, or other controller - the Guide button will no longer be bound (in Steam) after this file has been run.
 
-**Everything else is unaffected, Game Bar will still work as normal - it's just the Guide button that is unmapped from within Steam**
+*Everything else is unaffected, Game Bar will still work as normal - it's just the Guide button that is unmapped from within Steam*
 
-Love it or hate it, I don't think that Valve will ever address the fact that people don't want Big Picture Mode on the Guide button.
+
 
 
 <!-- PREREQUISITES -->
@@ -76,6 +79,8 @@ You'll need PowerShell (>v7) to use this script. To check, open up PowerShell an
 $PSVersionTable
 ```
 If you don't have PowerShell 7, see [Installing PowerShell on Windows](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
+
+
 
 
 <!-- USAGE -->
@@ -89,6 +94,9 @@ _Set-ExecutionPolicy Unrestricted_ - Read about [execution policy](https://learn
 ## If you've got Steam installed to a non-standard location
 You will need to **edit the file to include your path**, at least until I write another script that finds it automatically (soonish).
 
+
+
+
 <!-- Automation -->
 ## Automation
 This will run the script four seconds after Steam fires up (so after the button is remapped by Steam).
@@ -97,11 +105,14 @@ You'll need to:
 - Configure a *Scheduled Task*
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting an audit 'Success' flag in the Security Policy.
 - Either be an admin, or stipulate an admin account for the task to run.
-- Update the following tags, to match your own:
-  - `<Author>` - 
-  - `<UserId>` - To get your S-1-... `<UserId>`, open a Command Prompt and type `wmic useraccount get name,sid`
-  - `<Arguments>` - 
 
+You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then inmporting it into Task Scheduler:
+
+  - `<Author>` - change this to your PC name and Username `<Author>DESKTOP-CHANGE\ME</Author>`.
+  - `<UserId>` - To get your S-1-123456789.... number, run `wmic useraccount get name,sid` in command prompt.
+  - `<Arguments>` - Update this with your path to your new Powershell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1"</Arguments>`
+
+or you can create the task yourself. How to set it up...
 
 
 ### The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)
@@ -117,6 +128,8 @@ You'll need to:
   </Query>
 </QueryList>
 ```
+
+
 
 ### The Action (*TS/Actions* > *Start a Program*)
 
