@@ -129,7 +129,7 @@ Specify additional settings that affect the behavior of the task.
 ⬛ If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
 ✅ If the task is already running, then the following rule applies: *Stop the existing instance*
 
-A full set of reference screenshots are available - General         Triggers          Actions         Conditions          Settings
+A full set of reference screenshots are available - [General](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/General.png)         Triggers          Actions         Conditions          Settings
 
 <!-- What Changes -->
 ## Changes to the output file
