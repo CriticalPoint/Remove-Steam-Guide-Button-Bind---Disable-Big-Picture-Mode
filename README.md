@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <h3 align="center">Stop Steam JUMP SCARE when pressing Guide on your controller and being forced to Big Picture Mode (BPM)</h3>
+  <h3 align="center">Stop Steam Big Picture Mode (BPM) taking over your controllers Home (Guide) button</h3>
   <a href="[https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode?readme=1#readme-top)">
     <img src="images/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode' written across them" width="397" height="224">
   </a>
@@ -37,101 +37,56 @@
   <br>
   -->
     <p align="center">
-    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be since you're here), I've made a script to disable it that will 'just work' on your Windows PC.
+    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too, since you're here), I started about cresating a script that would 'just work' on your Windows PC.
     <br>
     <br>
-    I've pulled the Steam config apart, analysed it, changed it, tested it and finally arrived at something that everyone can make use of - a PowerShell script that removes guide button binding at boot.
+    I pulled the Steam config apart to find out what's happening, and finally arrived at something that, hopefully, everyone could make use of - a PowerShell script that removes guide button binding at launch (of the Steam Client).
     <br>
     <br>
-    Unsure anyone would trust spurious code on Valve forums and Reddit, I've put together #myFirstRepo - explore the code, decide if it's for you, ask questions, fork it, chop it, poke it, chew it up and/or spit it out - it's yours to do with what you will.
+    #myFirstRepo - explore the code, decide if it's for you, ask questions, fork, chop, poke, chew it up and/or spit it out - it's yours to do with what you will.
   </p>
 </div>
 
 <!-- What it does -->
 ## What does this actually do?
 
-Great question - You know when you're just playing games, minding your business, listening to music and the like - you press your Guide button to access Game Bar and BAM - Big Picture Mode out of nowhere and for seemingly NO REASON 😱
+You press your Guide button to access Xbox Game Bar (for example) and BAM, Big Picture Mode from nowhere.
 
-You've tried to disable it, you've toggled different things off, then on, back to off, you're getting nowhere and you're now wondering if you can somehow get them to stop sort of half-way between on and off. You've done this some twenty-odd times now and it's still not working...
+You've tried disable it, you've toggled different things off, then on, and back to off but you're getting nowhere... "*Why isn't it working, what am I doing wrong?*"
 
-..."*Why isn't it working, what am I doing wrong?*". Nothing, young Padawan, you're doing absolutely nothing wrong, at all. You've been set-up to fail, you're playing an unwinnable game against, an invisible competitor. It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't.
+You've been set-up to fail as Steam re-maps that button at launch and again at exit. It does it a bunch of other times, too (when opening specific option pages), and it just keeps coming back.
 
+It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't.
 <img align="center" src="images/GuideButtonDoes-Not-NotFocusSteam.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
-"*How?*" another good one - It removes all Steam bindings to your guide button. It doesn't matter which controller you're using; PlayStation, Xbox, Nintendo, aftermarket, off-brand or otherwise - the Guide button on your controller will no longer be bound (in Steam), and so it cannot jump-scare you, after running this file.
+## How does it work?
+Targeting the SDL config directly ('*guide*' is a non-Steam assignment, so it's unlikely to ever change), the script removes all bindings (from all controllers) in your settings.
+It doesn't matter if you're using a PlayStation, Xbox, Nintendo, aftermarket, off-brand, or other controller - the Guide button will no longer be bound (in Steam) after this file has been run.
 
 **Everything else is unaffected, Game Bar will still work as normal - it's just the Guide button that is unmapped from within Steam**
 
-There are some wonderfully helpful people out there that have shared various fixes on forums - the closest I found was to run ['*Setup Device Inputs*' and skip the Guide button assignment altogether](https://www.reddit.com/r/Steam/comments/11jfpmo/how_do_i_disable_xbox_button_launching_big/), which is a pretty neat workaround, but I thought we could all benefit from a script. Plus I was a bit bored, and that's how we ended up here.
-
-Love it or hate it, Valve won't ever address the fact that people don't want Big Picture Mode on their Guide button. By targeting the SDL config directly ('*guide*' is a non-Steam assignment, so the reference won't be changed [why, oh why did I just say that 😶]), means that this method should still work after various client updates and the like. It targets how controllers are configured to work on Windows, non-specific to Steam.
-
-🐛 Got a bug to report? Please do so [here](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=), otherwise I can't improve upon it!
-
-<p align="left">The software is provided as-is, and it's up to you if you choose to use it. I invite you to <a href="#disclaimer">read the disclaimer</a>.</p>
-
-Enjoy! 🤜🏻🤛🏻
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-If your Steam directory is the default ```C:\Program Files (x86)\Steam\``` then you can go right ahead and grab the [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1) PowerShell script and, after reading on to see what it does, set it up as a scheduled task (automation for this to follow).
-
-If you've got Steam installed to a non-standard location, you'll need to edit the file (to include your path) first - easy peasy - this is whilst I finish up another script that will allow you to paste your path, and yet another that will just go and find it for you (better still. Automation for this to follow, too).
+Love it or hate it, I don't think that Valve will ever address the fact that people don't want Big Picture Mode on the Guide button.
 
 
 <!-- PREREQUISITES -->
 ## Prerequisites
 
-You'll need PowerShell (>v7) to use this script.
-
-You may already have v7 or above. To check, open up PowerShell and (right click to) **paste** this, to find your version:
+You'll need PowerShell (>v7) to use this script. To check, open up PowerShell and run the below to find your version:
 ```
 $PSVersionTable
-
 ```
-If not, see [Installing PowerShell on Windows](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
+If you don't have PowerShell 7, see [Installing PowerShell on Windows](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows)
 
 
 <!-- USAGE -->
 ## Usage
+If your Steam directory is ```C:\Program Files (x86)\Steam\``` (default)
+Go ahead and grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20POWERSHELL%20SCRIPTS%20IN%20HERE/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1).
 
-Using it's easy, just double-click to run. Although you may have to adjust your execution policy
+Open Steam and run the script, although you'll likely have to adjust your execution policy...
+_Set-ExecutionPolicy Unrestricted_ - Read about [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3)
 
-TL:DR - _Set-ExecutionPolicy Unrestricted_
-
-Supplied on the understanding that you've read about [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3)
-
-**Use with caution**
-
-
-<!-- How it Works -->
-## How It Works
-
-Unless you're overly familiar with PowerShell, understanding the script itself may pose a small challenge. To that end, I've added comments throughout the file, which correlate to this list.
-
-Here's what it does, step-by-step.
-
-1 - Checks your PowerShell version (>7.0 required)
-2 - Declares the file path to your Steam install directory (default location)
-3 - Makes a Backup of config.vdf > config.vdf.BACKUP.1 > config.vdf.BACKUP.2, etc
-4 - Read the file contents to string
-5 - Splits the contents into an array
-6 - Creates a new array to store the updated lines
-7 - Creates a variable to store the number of strings deleted
-8 - Iterates through the lines to remove the binds
-9 - Increments the 'number of strings deleted' variable, if different to original
-10 - Adds the updated lines to the new array
-11 - Joins them back into a string
-12 - Saves the updated file content to the output file (config.vdf)
-13 - Outputs (to the console) the number of binds that have been deleted (verification)
-
-I initially wanted to do this with RegEx (non-greedy), but it didn't cut it because of the lack of spacing around the "guide:b4," string.
-It's taken me all day to get here and so I look at it that as my first public PS script, I'm pretty darn proud of it!
-
-I'd be happy to learn a different way, how would you have done it?
-
+If you've got Steam installed to a non-standard location, you'll need to **edit the file to include your path**, at least until I write another script that automatically finds it for you.
 
 <!-- What Changes -->
 ## Changes to the output file
