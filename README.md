@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <h3 align="center">Stop Steam Big Picture Mode (BPM) taking over your controllers Home (Guide) button</h3>
+  <h3 align="center">Stop Steam Big Picture Mode (BPM) taking over your controllers Home (Guide) button</h4>
   <a href="[https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode?readme=1#readme-top)">
     <img src="images/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode' written across them" width="397" height="224">
   </a>
@@ -100,7 +100,7 @@ You'll need:
 - Either be an admin, or stipulate an admin account for the task to run.
 
 
-<h3>The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)</h3>
+<h4>The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)</h4>
 ```
 <QueryList>
   <Query Id="0" Path="Application">
@@ -113,7 +113,7 @@ You'll need:
 </QueryList>
 ```
 
-<h3>The Action (*TS/Actions* > *Start a Program*)</h3>
+<h4>The Action (*TS/Actions* > *Start a Program*)</h4>
 Program/Script:   [code]pwsh[/code]
 Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"[/code]
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
