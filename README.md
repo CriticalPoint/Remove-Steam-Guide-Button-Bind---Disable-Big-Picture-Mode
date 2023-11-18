@@ -31,7 +31,7 @@
   </a>
   <br>
   <br>
-  <h3 align="center" style="color:orange;">Sorry but I took a break from this as it became more complex. I have now finished with the sutomation part, and you can read on to see how to configure the script to automatically run a few seconds after Steam has loaded up</h3>
+  <h3 align="center" style="color:green;">Sorry but I took a break from this as it became more complex. I have now finished with the sutomation part, and you can read on to see how to configure the script to automatically run a few seconds after Steam has loaded up</h3>
   <br>
   <br>
   -->
