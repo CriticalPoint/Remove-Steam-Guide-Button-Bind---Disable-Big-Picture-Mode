@@ -91,8 +91,45 @@ You will need to **edit the file to include your path**, at least until I write 
 
 <!-- Automation -->
 ## Automation
+This will run this script 4 seconds after Steam fires up (so after the button is remapped by Steam).
+
+You'll need:
+- to configure a **Scheduled Task**
+- to enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), 'Success', as a Security Policy.
+- Update the following tags in the script to match your own - `<Author>` `<UserId>` `<Arguments>`
+- Either be an admin, or stipulate an admin account for the task to run.
 
 
+The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)
+```
+<QueryList>
+  <Query Id="0" Path="Application">
+    <Select Path="Application">
+    *[System[Provider[@Name='Application'] and (Level=4 or Level=0) and (EventID=4688)]]
+    and 
+     *[EventData[Data[@Name='NewProcessName'] and (Data='C:\Program Files (x86)\Steam\steam.exe')]]
+     </Select>
+  </Query>
+</QueryList>
+```
+
+The Action (*TS/Actions* > *Start a Program*)
+Program/Script:   [code]pwsh[/code]
+Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"[/code]
+*This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
+
+The Settings (Almost all options are checked)
+Specify additional settings that affect the behavior of the task.
+✅ Allow task to be run on demand
+✅ Run task as soon as possible after a scheduled start is missed
+✅ If the task fails, restart every: 1 Minute
+✅ Attempt to restart up to: 3 times
+✅ Stop the task if it runs longer than: 1 hour
+✅ If the running task does not end when requested, force it to stop
+⬛ If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
+✅ If the task is already running, then the following rule applies: *Stop the existing instance*
+
+A full set of reference screenshots are available - General         Triggers          Actions         Conditions          Settings
 
 <!-- What Changes -->
 ## Changes to the output file
