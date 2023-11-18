@@ -101,6 +101,7 @@ You'll need:
 
 
 <h4>The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)</h4>
+
 ```
 <QueryList>
   <Query Id="0" Path="Application">
