@@ -106,16 +106,17 @@ You'll need to:
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting an audit 'Success' flag in the Security Policy.
 - Either be an admin, or stipulate an admin account for the task to run.
 
-You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then inmporting it into Task Scheduler:
+You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then inmporting it into Task Scheduler...
 
   - `<Author>` - change this to your PC name and Username `<Author>COMPUTERNAME-CHANGE\ME</Author>`.
   - `<UserId>` - To get your S-1-123456789.... number, run `wmic useraccount get name,sid` in command prompt.
   - `<Arguments>` - Update this with your path to your new Powershell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1"</Arguments>`
 
-or you can create the task yourself. How to set it up...
+...or you can create the task yourself. Here's how to set it up...
 
 
-### The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)
+### Set the Trigger
+(*Triggers* > *On an Event* > *Custom* > *XML*)
 
 ```
 <QueryList>
@@ -131,15 +132,16 @@ or you can create the task yourself. How to set it up...
 
 
 
-### The Action (*TS/Actions* > *Start a Program*)
+### Set the Action
+(*TS/Actions* > *Start a Program*)
 
-'Program/Script', add ```pwsh```
+'Program/Script'  ```pwsh```
 
-'Arguments', add ```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
+'Arguments'  ```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
 
-## The Settings
-Specify additional settings that affect the behavior of the task. *Almost* all options are checked.
+## Change Settings
+Specify these additional settings, not that *almost* but not all of the options are checked.
 
 * Allow task to be run on demand ✅
 * Run task as soon as possible after a scheduled start is missed ✅
@@ -152,12 +154,15 @@ Specify additional settings that affect the behavior of the task. *Almost* all o
 
 A full set of reference screenshots are available - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
 
+
+
 <!-- What Changes -->
 ## Changes to the output file
 
 You'll find both copies of the config.vdf in the [diff check of config.vfd](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/tree/main/diff%20check%20of%20config.vfd) folder - *before-config.vdf*, and *after-config.vdf*.
 
 The final Diff Check (minus all my personal info) is also available, here [Remove all Guide button binds (guide:bxx) from 'config.vdf'](https://www.diffchecker.com/TxvnAz0R/)
+
 
 
 <!-- CONTRIBUTING -->
@@ -170,15 +175,19 @@ If you have a suggestion that would make this Repo better then please do contrib
 Don't forget to give the project a star! Thanks again!
 
 
+
 <!-- Bugs -->
 ## Issues and Bugs!
 
 🐛 Got a bug? Please report it [here](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=) so that I may improve upon the script(s)!
 
+
+
 <!-- Disclaimer-->
 ## DISCLAIMER
 <a name="disclaimer"></a>
 This software is provided as-is and, although I have tested it on my machine, a couple of test VM's, in Windows Sandbox, and on my unsuspecting mates' PC, I'm afraid that I cannot accept any liability for 'damages', howsoever caused. Please understand that by using this software you do so at your own risk, and that constitutes your acceptance of the fact that I am not responsible for anything that has happened in the past by not using it, anything that may happen as a result of using it now, or by either using it, or not, in future - it's ultimately up to you if you choose to use it 🙏🏻
+
 
 
 <!-- CONTACT -->
@@ -187,6 +196,7 @@ This software is provided as-is and, although I have tested it on my machine, a 
 Reach me via Discussions, if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode)
+
 
 
 <!-- LICENSE -->
