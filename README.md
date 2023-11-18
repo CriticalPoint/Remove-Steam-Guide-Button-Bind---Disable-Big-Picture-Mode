@@ -141,7 +141,10 @@ You can either [use the included template](https://github.com/CriticalPoint/Remo
 'Program/Script'  ```pwsh```
 
 'Arguments'  ```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
-*This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
+*This assumes the location of the script is in a folder named 'PS', on the root of C:
+**Update your path as necessary**
+
+
 
 ### Configure the Settings
 Specify these additional settings (and their values), not that *almost* but not all of the options are checked.
@@ -157,7 +160,10 @@ Specify these additional settings (and their values), not that *almost* but not 
 
 A full set of reference screenshots are available - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
 
+
+
 ### Save!
+
 
 You can verify the success of this by first disabling the Task and testing your Guide button in Steam. It should enter BPM.
 Now exit Steam, re-enable the Task you just created a, opening Steam and testing again. BPM should be fully disabled. If for whatever reason it is not, please either [Raise an Issue](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues), or drop by [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions)
