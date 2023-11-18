@@ -201,8 +201,8 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- Disclaimer-->
-## DISCLAIMER
+<!-- Disclaimer -->
+## Disclaimer
 <a name="disclaimer"></a>
 This software is provided as-is and, although I have tested it on my machine, a couple of test VM's, in Windows Sandbox, and on my unsuspecting mates' PC, I'm afraid that I cannot accept any liability for 'damages', howsoever caused. Please understand that by using this software you do so at your own risk, and that constitutes your acceptance of the fact that I am not responsible for anything that has happened in the past by not using it, anything that may happen as a result of using it now, or by either using it, or not, in future - it's ultimately up to you if you choose to use it 🙏🏻
 
