@@ -8,24 +8,24 @@ assignees: CriticalPoint
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is - not the steps you took to get to where you are, those come after. More like "The error I am getting is..." and we can go from there 🙂
+A clear and concise description of what the bug is (not the steps you took, those come later) Think more along the lines of "Following the guide, I am getting this specific error...", and we can go from there 🙂
 
 **To Reproduce**
-Steps to reproduce the behaviour:
+Steps to reproduce:
 1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+2. Click on '...'
+3. Scroll down to '...'
+4. See error happens when I '...'
 
 **Expected behaviour**
-A clear and concise description of what you expected to happen.
+A clear and concise description of what you expected to happen (ot overally important unless you're trying something unusual or different)
 
 **Screenshots**
-Absolutely add some screenshots, a picture is worth a thousand and all that!
+Absolutely add screenshots if you can as a picture adds loads of context!
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Powershell version [Start > Powershell > $PSVersionTable]
+**Desktop (include the following information):**
+ - OS: (Run `winver` from CMD or Start Menu)
+ - PowerShell version (Run `$PSVersionTable` in PosweShell to get this)
 
 **Additional context**
-Add any other context about the problem here.
+Add context here, anything you think may be helpful!
