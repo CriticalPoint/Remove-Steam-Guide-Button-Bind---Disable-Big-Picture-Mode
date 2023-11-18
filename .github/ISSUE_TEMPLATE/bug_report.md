@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help me improve
-title: ''
+title: 'The thing I replaced this text with is giving me grief'
 labels: ''
 assignees: CriticalPoint
 
