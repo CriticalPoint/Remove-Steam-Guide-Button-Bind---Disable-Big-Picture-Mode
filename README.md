@@ -141,7 +141,8 @@ You can either [use the included template](https://github.com/CriticalPoint/Remo
 'Program/Script'  ```pwsh```
 
 'Arguments'  ```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
-*This assumes the location of the script is in a folder named 'PS', on the root of C:
+*This assumes the location of the script is in a folder named 'PS', on the root of C:/*
+
 **Update your path as necessary**
 
 
