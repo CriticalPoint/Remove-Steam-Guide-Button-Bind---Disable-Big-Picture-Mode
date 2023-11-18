@@ -31,18 +31,18 @@
   </a>
   <br>
   <br>
-  <h3 align="center" style="color:green">Sorry but I took a break from this as it became more complex. I have now finished with the sutomation part, and you can read on to see how to configure the script to automatically run a few seconds after Steam has loaded up</h3>
+  <h3 align="center">Sorry but I took a break from this as it became more complex. I have now finished with the automation part, and you can read on to see how to configure the script to automatically run a few seconds after Steam has loaded up</h3>
   <br>
   <br>
   -->
     <p align="center">
-    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too, since you're here), I started about cresating a script that would 'just work' on your Windows PC.
+    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too, since you're here), I started about creating a script that would 'just work' on your Windows PC.
     <br>
     <br>
     I pulled the Steam config apart to find out what's happening, and finally arrived at something that, hopefully, everyone could make use of - a PowerShell script that removes guide button binding at launch (of the Steam Client).
     <br>
     <br>
-    #myFirstRepo - explore the code, decide if it's for you, ask questions, fork, chop, poke, chew it up and/or spit it out - it's yours to do with what you will.
+    #myFirstRepo - explore the code, decide if it's for you, ask questions, fork, chop, poke, chew it up, and/or spit it out - it's yours to do with what you will.
   </p>
 </div>
 
@@ -91,7 +91,7 @@ Open Steam and run the script, although you'll likely have to adjust your execut
 _Set-ExecutionPolicy Unrestricted_ - Read about [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3)
 
 ## If you've got Steam installed to a non-standard location
-You will need to **edit the file to include your path**, at least until I write another script that finds it automatically (soonish).
+You will need to **edit the file to include your path**, at least until I write another script that finds it automatically. Start a [Discussion](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions) if you need this sooner and I'll get to it 👍🏻
 
 
 
@@ -105,11 +105,11 @@ You'll need to:
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting an audit 'Success' flag in the Security Policy.
 - Either be an admin, or stipulate an admin account for the task to run.
 
-You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then inmporting it into Task Scheduler...
+You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then importing it into Task Scheduler...
 
   - `<Author>` - change this to your PC name and Username `<Author>COMPUTERNAME-CHANGE\ME</Author>`.
   - `<UserId>` - To get your S-1-123456789.... number, run `wmic useraccount get name,sid` in command prompt.
-  - `<Arguments>` - Update this with your path to your new Powershell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1"</Arguments>`
+  - `<Arguments>` - Update this with your path to your new PowerShell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1"</Arguments>`
 
 ...or you can create the task yourself. Here's how to set it up...
 
@@ -156,7 +156,7 @@ A full set of reference screenshots are available - [General](images/taskSchedul
 ### Save!
 
 You can verify the success of this by first disabling the Task and testing your Guide button in Steam. It should enter BPM.
-Now exit Steam, reenable the Task you just created a, opening Steam and testing again. BPM should be fully disabled. If for whatever reason it is not, please either [Raise an Issue](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues), or drop by [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions)
+Now exit Steam, re-enable the Task you just created a, opening Steam and testing again. BPM should be fully disabled. If for whatever reason it is not, please either [Raise an Issue](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues), or drop by [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions)
 
 
 
