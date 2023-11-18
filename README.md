@@ -31,8 +31,7 @@
   </a>
   <br>
   <br>
-  <!--
-  <h1 align="center" style="color:red;">Script temporarily offline - please be patient while I investigate a potential issue - just want to be sure</h1>
+  <h3 align="center" style="color:orange;">Sorry but I took a break from this as it became more complex. I have now finished with the sutomation part, and you can read on to see how to configure the script to automatically run a few seconds after Steam has loaded up</h3>
   <br>
   <br>
   -->
@@ -141,7 +140,7 @@ You can either [use the included template](https://github.com/CriticalPoint/Remo
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
 
 ### Configure the Settings
-Specify these additional settings, not that *almost* but not all of the options are checked.
+Specify these additional settings (and their values), not that *almost* but not all of the options are checked.
 
 - [X] Allow task to be run on demand
 - [X] Run task as soon as possible after a scheduled start is missed
