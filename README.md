@@ -127,14 +127,14 @@ Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\P
 The Settings (Almost all options are checked)
 Specify additional settings that affect the behavior of the task.
 
-* ✅ Allow task to be run on demand
-* ✅ Run task as soon as possible after a scheduled start is missed
-* ✅ If the task fails, restart every: *1 Minute*
-* ✅ Attempt to restart up to: 3 times
-* ✅ Stop the task if it runs longer than: *1 hour*
-* ✅ If the running task does not end when requested, force it to stop
-* ⬛ If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
-* ✅ If the task is already running, then the following rule applies: *Stop the existing instance*
+* Allow task to be run on demand ✅
+* Run task as soon as possible after a scheduled start is missed ✅
+* If the task fails, restart every: *1 Minute* ✅
+* Attempt to restart up to: *3 times* ✅
+* Stop the task if it runs longer than: *1 hour* ✅
+* If the running task does not end when requested, force it to stop ✅
+* If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
+* If the task is already running, then the following rule applies: *Stop the existing instance* ✅
 
 A full set of reference screenshots are available - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
 
