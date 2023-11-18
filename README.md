@@ -91,7 +91,7 @@ You will need to **edit the file to include your path**, at least until I write 
 
 <!-- Automation -->
 ## Automation
-This will run this script 4 seconds after Steam fires up (so after the button is remapped by Steam).
+This will run the script four seconds after Steam fires up (so after the button is remapped by Steam).
 
 You'll need:
 - to configure a **Scheduled Task**
@@ -115,6 +115,7 @@ You'll need:
 ```
 
 <h4>The Action (*TS/Actions* > *Start a Program*)</h4>
+
 Program/Script:   [code]pwsh[/code]
 Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"[/code]
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
@@ -130,7 +131,7 @@ Specify additional settings that affect the behavior of the task.
 ⬛ If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
 ✅ If the task is already running, then the following rule applies: *Stop the existing instance*
 
-A full set of reference screenshots are available - [General](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/General.png)         Triggers          Actions         Conditions          Settings
+A full set of reference screenshots are available - [General](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/General.png) - [Triggers](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Triggers.png) - [Actions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Actions.png) - [Conditions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Conditions.png) - [Settings](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/images/taskScheduler/Settings.png)
 
 <!-- What Changes -->
 ## Changes to the output file
