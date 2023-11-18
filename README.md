@@ -120,15 +120,13 @@ You'll need to:
 
 ### The Action (*TS/Actions* > *Start a Program*)
 
-**Program/Script**:
-```pwsh```
+'Program/Script', add ```pwsh```
 
-**Arguments**:
-```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
+'Arguments', add ```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
 
-The Settings (Almost all options are checked)
-Specify additional settings that affect the behavior of the task.
+## The Settings
+Specify additional settings that affect the behavior of the task. *Almost* all options are checked.
 
 * Allow task to be run on demand ✅
 * Run task as soon as possible after a scheduled start is missed ✅
