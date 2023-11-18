@@ -108,7 +108,7 @@ You'll need to:
 
 You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then inmporting it into Task Scheduler:
 
-  - `<Author>` - change this to your PC name and Username `<Author>DESKTOP-CHANGE\ME</Author>`.
+  - `<Author>` - change this to your PC name and Username `<Author>COMPUTERNAME-CHANGE\ME</Author>`.
   - `<UserId>` - To get your S-1-123456789.... number, run `wmic useraccount get name,sid` in command prompt.
   - `<Arguments>` - Update this with your path to your new Powershell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1"</Arguments>`
 
