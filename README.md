@@ -100,7 +100,7 @@ You'll need:
 - Either be an admin, or stipulate an admin account for the task to run.
 
 
-The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)
+<h3>The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)</h3>
 ```
 <QueryList>
   <Query Id="0" Path="Application">
@@ -113,7 +113,7 @@ The Trigger (*Triggers* > *On an Event* > *Custom* > *XML*)
 </QueryList>
 ```
 
-The Action (*TS/Actions* > *Start a Program*)
+<h3>The Action (*TS/Actions* > *Start a Program*)</h3>
 Program/Script:   [code]pwsh[/code]
 Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"[/code]
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
