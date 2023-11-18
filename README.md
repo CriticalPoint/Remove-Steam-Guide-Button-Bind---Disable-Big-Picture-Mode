@@ -121,6 +121,7 @@ Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\P
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
 
 The Settings (Almost all options are checked)
+
 Specify additional settings that affect the behavior of the task.
 ✅ Allow task to be run on demand
 ✅ Run task as soon as possible after a scheduled start is missed
