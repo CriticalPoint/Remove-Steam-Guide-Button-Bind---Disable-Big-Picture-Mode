@@ -104,7 +104,9 @@ You'll need to:
 - Configure a *Scheduled Task*
 - Either be an admin, or stipulate an admin account for the task to run.
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting audit 'Success' and 'Failure' flags in the Security Policy.
-- - Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking. Configure the properties for both 'success' and 'failure'.
+- - Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking.
+
+- - Configure the properties for both 'success' and 'failure'.
 
 
 You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then importing it into Task Scheduler...
