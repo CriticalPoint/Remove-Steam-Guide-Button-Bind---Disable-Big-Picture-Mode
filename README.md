@@ -120,8 +120,11 @@ You'll need to:
 
 ### The Action (*TS/Actions* > *Start a Program*)
 
-Program/Script:   [code]pwsh[/code]
-Arguments:   [code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"[/code]
+**Program/Script**:
+[code]pwsh[/code]
+
+**Arguments**:
+[code]-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"[/code]
 *This assumes the location of the script is in a folder named 'PS', on the root of C. **Update as necessary**.*
 
 The Settings (Almost all options are checked)
