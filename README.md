@@ -38,7 +38,9 @@
     I did some digging to find out what's happening with Steam and the Guide assignment and arrived at a simple PowerShell script that removes all Guide button bindings when the Steam Client launches.
     <br>
     <br>
-    ⚠️ I am looking for help with a final issue that will allow everyone to have 'double-click' setup using an automated Scheduled Task creation tool - I am very close but stretched for time and lack the knowledge to get this over the line. If you're good with PowerShell, please have a stab at [Scheduled Task automation | XML and PowerShell](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/6)
+    ⚠️ I'm looking for help that will allow everyone to have 'double-click' setup using an automated Scheduled Task creation tool. I'm close but stretched for time and specific knowledge to get it over the line.
+    <br>
+    If you're good with PowerShell, take a stab at <a href="https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/6)" target="_blank">Scheduled Task automation | XML and PowerShell</a>
     <br>
   </p>
 </div>
