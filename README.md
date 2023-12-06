@@ -98,7 +98,7 @@ So "D:\", or "E:\" for example...
 
 <!-- Automation -->
 ## Automation
-Run the script some time after Steam fires up - four seconds works for me although YMMV. Some say Steam takes a little longer to open; adjust according to your system.
+Run the script some time after Steam fires up - four seconds works for me although YMMV. Some say Steam takes a little longer to open; adjust according to your system (default is set to 8).
 
 Follow along to:
 - Configure a *Scheduled Task* and have an admin account available for the task to run under.
