@@ -34,23 +34,22 @@
   <h3 align="center">Sorry but I took a break from this as it became more complex. I have now finished with the automation part, and you can read on to see how to configure the script to automatically run a few seconds after Steam has loaded up</h3>
   <br>
   <br>
-  -->
     <p align="center">
-    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too, since you're here), I started about creating a script that would 'just work' on your Windows PC.
+    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too, since you're here), I started about creating a 'set and forget' script for my PC.
     <br>
     <br>
-    I pulled the Steam config apart to find out what's happening, and finally arrived at something that, hopefully, everyone could make use of - a PowerShell script that removes guide button binding at launch (of the Steam Client).
+    I did some digging to find out what's happening with Steam and the Guide assignment and arrived at something that, hopefully, everyone can make use of in their own way - a simple PowerShell script that removes all Guide button bindings when the Steam Client loads.
     <br>
     <br>
-    #myFirstRepo - explore the code, decide if it's for you, ask questions, fork, chop, poke, chew it up, and/or spit it out - it's yours to do with what you will.
+    Explore the code and decide if it's for you. Ask questions, fork, chop, poke, chew it up, and/or spit it out, it is yours to do with what you will.
   </p>
 </div>
 
 
 
 
-<!-- What it does -->
-# What it does
+<!-- Why -->
+# Why
 
 You press your Guide button to access Xbox Game Bar (for example) and BAM, Big Picture Mode from nowhere.
 
@@ -61,11 +60,11 @@ You've been set-up to fail as Steam re-maps that button at launch and again at e
 It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't.
 <img align="center" src="images/readmeAssets/GuideButtonDoes-Not-NotFocusSteam.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
-# How is does it
-Targeting the SDL config directly ('*guide*' is a non-Steam assignment, so it's unlikely to ever change), the script removes all bindings (from all controllers) in your settings.
-It doesn't matter if you're using a PlayStation, Xbox, Nintendo, aftermarket, off-brand, or other controller - the Guide button will no longer be bound (in Steam) after this file has been run.
+# How it does it
+Targeting the SDL config directly ('*guide*' is a non-Steam assignment so unlikely to ever change), the script removes all bindings (from all controllers) in your settings.
+It doesn't matter if you're using a PlayStation, Xbox, Nintendo, aftermarket, off-brand or other controller - the Guide button will no longer be bound (in Steam) after the file runs.
 
-*Everything else is unaffected, Game Bar will still work as normal - it's just the Guide button that is unmapped from within Steam*
+*Everything else is unaffected, Game Bar will still work as normal - it's just the Guide button assignment withint Steam that gets unmapped*
 
 
 
@@ -99,7 +98,7 @@ Provided it's on C: - if not, you'll need to edit line 11 of the script from "C:
 
 <!-- Automation -->
 ## Automation
-This will run the script four seconds after Steam fires up (so after the button is remapped by Steam).
+This will run the script four seconds after Steam fires up (so after the button is remapped by Steam). YMMV - some systems are fine with a 4 second delay, others say Steam takes longer to open - adjust according to your system.
 
 You'll need to:
 - Configure a *Scheduled Task*
@@ -113,7 +112,7 @@ You'll need to:
 You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then importing it into Task Scheduler...
 
   - `<Author>` - change this to your PC name and Username `<Author>COMPUTERNAME-CHANGE\ME</Author>`.
-  - `<UserId>` - To get your S-1-123456789.... number, run `wmic useraccount get name,sid` in command prompt.
+  - `<UserId>` - To get your S-1-123456789.... number, run `wmic useraccount get name,sid` in command prompt to get it.
   - `<Arguments>` - Update this with your path to your new PowerShell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1"</Arguments>`
 
 ...or you can create the task yourself. Here's how to set it up...
