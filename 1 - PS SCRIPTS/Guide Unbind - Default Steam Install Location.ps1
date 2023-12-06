@@ -6,19 +6,25 @@ if ($powershellVersion.Major -lt 7.0) {
   Write-Host "PowerShell version >7.0 required."
   exit
 }
-# 2 - Declares the file path
-$filePath = "C:\Program Files (x86)\Steam\config\config.vdf"
+
+# 2 - Search for config.vdf file in the Steam folder hierarchy
+$configFilePath = (Get-ChildItem -Path C:\ -Filter "config.vdf" -Recurse | Where-Object { $_.FullName -like "*Steam*\Config*" })
+
+if (!$configFilePath) {
+  Write-Host "Not found on C:\ - Update line 11 of this script if you're running Steam from a different drive..."
+  exit
+}
 
 # 3 - Makes a Backup of config.vdf > config.vdf.BACKUP.1 > config.vdf.BACKUP.2, etc
-Copy-Item -Path $filePath -Destination "$filePath.backup"
+Copy-Item -Path $configFilePath -Destination "$configFilePath.backup"
 $i = 1
-while (Test-Path "$filePath.backup.$i") {
+while (Test-Path "$configFilePath.backup.$i") {
   $i++
 }
-Rename-Item -Path "$filePath.backup" -NewName "$filePath.backup.$i"
+Rename-Item -Path "$configFilePath.backup" -NewName "$configFilePath.backup.$i"
 
 # 4 - Read the file contents to string
-$fileContents = Get-Content -Path $filePath
+$fileContents = Get-Content -Path $configFilePath
 
 # 5 - Splits the contents into an array
 $fileLines = $fileContents.Split([Environment]::NewLine)
@@ -46,7 +52,7 @@ foreach ($fileLine in $fileLines) {
 $updatedFileContents = $updatedFileLines -join [Environment]::NewLine
 
 # 12 - Saves the updated file content to the output file (config.vdf)
-Set-Content -Path $filePath -Value $updatedFileContents
+Set-Content -Path $configFilePath -Value $updatedFileContents
 
 # 13 - Outputs number of binds that have been deleted, to the console (verification).
 Write-Host "Number of strings deleted: $numberOfStringsDeleted"
