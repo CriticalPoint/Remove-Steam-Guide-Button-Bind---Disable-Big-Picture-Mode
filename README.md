@@ -31,7 +31,6 @@
     <h3 align="center">Stop Steam Big Picture Mode (BPM) taking over your controllers Home (Guide) button</h4>
   </a>
   <br>
-  <br>
   <h3 align="center">Sorry but I took a break from this as it became more complex. I have now finished with the automation part, and you can read on to see how to configure the script to automatically run a few seconds after Steam has loaded up</h3>
   <br>
   <br>
