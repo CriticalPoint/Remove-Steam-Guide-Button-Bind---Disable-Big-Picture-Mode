@@ -84,7 +84,7 @@ If you don't have PowerShell 7, see [Installing PowerShell on Windows](https://l
 <!-- USAGE -->
 # Usage
 ~~## If your Steam directory is ```C:\Program Files (x86)\Steam\``` (default)~~
-## Updated to go and find find 'config.vfd' in a folder named 'Steam\Config', on C: 💪🏻
+## The script will now automatically find your config, provided it exists within the 'Steam\Config' hierarchy, and it's on C: 💪🏻
 Go ahead and grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20PS%20SCRIPTS/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1).
 
 Open Steam and manually run the script (you'll likely have to adjust your execution policy...)
