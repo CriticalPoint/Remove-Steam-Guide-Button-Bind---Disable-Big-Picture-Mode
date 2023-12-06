@@ -35,10 +35,11 @@
     Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too, since you're here), I started about creating a 'set and forget' script for my PC.
     <br>
     <br>
-    I did some digging to find out what's happening with Steam and the Guide assignment and arrived at something that, hopefully, everyone can make use of in their own way - a simple PowerShell script that removes all Guide button bindings when the Steam Client loads.
+    I did some digging to find out what's happening with Steam and the Guide assignment and arrived at a simple PowerShell script that removes all Guide button bindings when the Steam Client launches.
     <br>
     <br>
-    Explore the code and decide if it's for you. Ask questions, fork, chop, poke, chew it up, and/or spit it out, it is yours to do with what you will.
+    ⚠️ I am looking for help with a final issue that will allow everyone to have 'double-click' setup using an automated Scheduled Task creation tool - I am very close but stretched for time and lack the knowledge to get this over the line. If you're good with PowerShell, please have a stab at [Scheduled Task automation | XML and PowerShell](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/6)
+    <br>
   </p>
 </div>
 
