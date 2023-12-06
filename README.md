@@ -83,17 +83,16 @@ If you don't have PowerShell 7, see [Installing PowerShell on Windows](https://l
 
 <!-- USAGE -->
 # Usage
-~~## If your Steam directory is ```C:\Program Files (x86)\Steam\``` (default)~~
-## The script will now automatically find your config, provided it exists within the 'Steam\Config' hierarchy, and it's on C: 💪🏻 
-Go ahead and grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20PS%20SCRIPTS/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1).
+## The script automatically finds your config (provided it's on C:)
+Grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20PS%20SCRIPTS/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1).
 
-Open Steam and manually run the script (you'll likely have to adjust your execution policy...)
+Open Steam and run the script after a few seconds (you'll likely have to adjust your execution policy...)
 _Set-ExecutionPolicy Unrestricted_ - Read about [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3)
 
 ~~## If you've got Steam installed to a non-standard location~~
 ~~You will need to **edit the file to include your path**, at least until I write another script that finds it automatically. Start a [Discussion](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions) if you need this sooner and I'll get to it 👍🏻~~
-## As promised, this is now handled automatically.
-Provided it's on C: - if not, you'll need to edit line 11 of the script from "C:\" to the drive you have it installed on; "D:\", for instance...
+## As promised, your install DIR is now detected automatically.
+Provided it's on C: - if it isn't, you'll need to edit the script at line 11. Just change "C:\" to the drive you have Steam installed on, so "D:\" or "E:\" for instance...
 
 
 <!-- Automation -->
