@@ -40,7 +40,7 @@
     <br>
     ⚠️ I'm looking for help that will allow everyone to have 'double-click' setup using an automated Scheduled Task creation tool. I'm close but stretched for time and specific knowledge to get it over the line.
     <br>
-    If you're good with PowerShell, take a stab at <a href="https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/6)" target="_blank">Scheduled Task automation | XML and PowerShell</a>
+    If you're good with PowerShell, take a stab at <a href="https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/6" target="_blank">Scheduled Task automation | XML and PowerShell</a>
     <br>
   </p>
 </div>
