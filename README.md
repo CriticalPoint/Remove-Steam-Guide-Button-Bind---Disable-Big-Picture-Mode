@@ -105,14 +105,18 @@ Follow along to:
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting audit 'Success' and 'Failure' flags in the Security Policy.
 ```Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```, configure and enable both *success* and *failure*
 
-When you're ready, either use the included template, or create your own task
-- [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task, updating it to match your own system as you go, and importing it into Task Scheduler...
+When you're ready, either use the included template, or create your own task [Manually](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode#set-the-trigger)
 
+# Automatically
+ [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task.
+ 
+ Update it to match your own settings and import it into Task Scheduler...
   - `<Author>` - change this to your PC name and Username (<Author>COMPUTERNAME-CHANGE\ME</Author>). Use `whoami` in CMD to easily get it.
   - `<UserId>` - Your *S-1-123456789....* number. Use `wmic useraccount get name,sid` in CMD to easily get it.
   - `<Arguments>` - Your path to the PowerShell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "**C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1**"</Arguments>`
 
-- Create the task yourself. Here's how...
+# Manually
+Create the task yourself, here's how...
 
 ### Set the Trigger
 (*Triggers* > *On an Event* > *Custom* > *XML*)
