@@ -108,7 +108,7 @@ Follow along to:
 When you're ready, either use the included template, or create your own task [Manually](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode#set-the-trigger)
 
 # Automatically
- [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task.
+ [Use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task.
  
  Update it to match your own settings and import it into Task Scheduler...
   - `<Author>` - change this to your PC name and Username (<Author>COMPUTERNAME-CHANGE\ME</Author>). Use `whoami` in CMD to easily get it.
@@ -118,7 +118,7 @@ When you're ready, either use the included template, or create your own task [Ma
 # Manually
 Create the task yourself, here's how...
 
-### Set the Trigger
+### 1. Set the Trigger
 (*Triggers* > *On an Event* > *Custom* > *XML*)
 
 ```
@@ -135,19 +135,17 @@ Create the task yourself, here's how...
 
 
 
-### Set the Action
+### 2. Set the Action
 (*TS/Actions* > *Start a Program*)
 
 'Program/Script'  ```pwsh```
 
 'Arguments'  ```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
-*This assumes the location of the script is in a folder named 'PS', on the root of C:/*
 
-**Update your path as necessary**
-
+*This assumes the location of the script is in a folder named 'PS', on the root of C: - Update path as necessary!*
 
 
-### Configure the Settings
+### 3. Configure the Settings
 Specify these additional settings (and their values), not that *almost* but not all of the options are checked.
 
 - [X] Allow task to be run on demand
@@ -163,14 +161,15 @@ A full set of reference screenshots are available - [General](images/taskSchedul
 
 
 
-### Save!
+### 4. Save!
 
 
 You can verify the success of this by first disabling the Task and testing your Guide button in Steam. It should enter BPM.
 
-Now exit Steam, re-enable the Task you just created a, opening Steam and testing again. BPM should be fully disabled.
+Now exit Steam, re-enable the Task you just created, open Steam and test it again. BPM should be a thing of the past. If for whatever reason BPM opens at this point, please [Raise an Issue](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues) and I will help you get set up. If issues aren't for you and you still need help, you can optionally drop into [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions) and ask for help there.
 
-If for whatever reason it is not, please either [Raise an Issue](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues), or drop by [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions)
+
+
 
 
 
