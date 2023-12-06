@@ -100,12 +100,10 @@ So "D:\", or "E:\" for example...
 ## Automation
 Run the script some time after Steam fires up - four seconds works for me although YMMV. Some say Steam takes a little longer to open; adjust according to your system.
 
-You'll need to:
+Follow along to:
 - Configure a *Scheduled Task* and have an admin account available for the task to run under.
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting audit 'Success' and 'Failure' flags in the Security Policy.
-```Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```
-
-- - ```Configure the properties for both *success* and *failure*```
+```Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```, configure and enable both *success* and *failure*
 
 When you're ready, either use the included template, or create your own task
 - [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task, updating it to match your own system as you go, and importing it into Task Scheduler...
