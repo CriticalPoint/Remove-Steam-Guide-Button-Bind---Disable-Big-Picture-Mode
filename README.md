@@ -98,12 +98,13 @@ So "D:\", or "E:\" for example...
 
 <!-- Automation -->
 ## Automation
-This will run the script four seconds after Steam fires up (after the button is forcibly remapped by Steam 😑). 4 seconds works perfectly for me, although YMMV. Some say Steam takes a little longer to open; adjust according to your system.
+Run the script some time after Steam fires up - four seconds works for me although YMMV. Some say Steam takes a little longer to open; adjust according to your system.
 
 You'll need to:
 - Configure a *Scheduled Task* and have an admin account available for the task to run under.
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting audit 'Success' and 'Failure' flags in the Security Policy.
 ```Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```
+
 ```Configure the properties for both *success* and *failure*```
 
 When you're ready, either use the included template, or create your own task
