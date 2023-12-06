@@ -91,7 +91,9 @@ Open Steam and, after a few seconds, run the script. You'll likely have to adjus
 
 As promised, your install DIR is now detected automatically, provided Steam is installed somewhere on C:\
 
-If it isn't on C:\, just edit the script (line 11), changing "C:\" to where the correct drive you have Steam installed on. "D:\" or "E:\", for example...
+If it isn't on C: you can just edit the script (line 11), changing "C:\" to the correct drive you have Steam installed.
+
+So "D:\", or "E:\" for example...
 
 
 <!-- Automation -->
