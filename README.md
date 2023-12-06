@@ -88,8 +88,7 @@ Grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/Crit
 
 Open Steam and, after a few seconds, run the script. You'll likely have to adjust your execution policy - _Set-ExecutionPolicy Unrestricted_. Read about [PowerShell execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3).
 
-~~## If you've got Steam installed to a non-standard location~~
-~~You will need to **edit the file to include your path**, at least until I write another script that finds it automatically. Start a [Discussion](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions) if you need this sooner and I'll get to it 👍🏻~~
+
 As promised, your install DIR is now detected automatically, provided it's somewhere on C:\
 If it isn't on C:\, just edit the script (line 11), changing "C:\" to where the correct drive you have Steam installed on. "D:\" or "E:\", for example...
 
