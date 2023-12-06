@@ -157,7 +157,7 @@ Specify these additional settings (and their values), not that *almost* but not 
 - [ ] If the task is not scheduled to run again, delete it after: ❌ (Unchecked)
 - [X] If the task is already running, then the following rule applies: *Stop the existing instance*
 
-A full set of reference screenshots are available - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
+A full set of reference screenshots are available (CTRL+click to open each in a new tab) - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
 
 
 
