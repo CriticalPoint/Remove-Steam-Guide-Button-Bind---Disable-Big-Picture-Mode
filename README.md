@@ -90,7 +90,7 @@ Open Steam and, after a few seconds, run the script. You'll likely have to adjus
 
 ~~## If you've got Steam installed to a non-standard location~~
 ~~You will need to **edit the file to include your path**, at least until I write another script that finds it automatically. Start a [Discussion](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions) if you need this sooner and I'll get to it 👍🏻~~
-## As promised, your install DIR is now detected automatically.
+### As promised, your install DIR is now detected automatically.
 Provided it's on C: - if it isn't, you'll need to edit the script at line 11. Just change "C:\" to the drive you have Steam installed on, so "D:\" or "E:\" for instance...
 
 
