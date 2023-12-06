@@ -90,31 +90,28 @@ Open Steam and, after a few seconds, run the script. You'll likely have to adjus
 
 ~~## If you've got Steam installed to a non-standard location~~
 ~~You will need to **edit the file to include your path**, at least until I write another script that finds it automatically. Start a [Discussion](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions) if you need this sooner and I'll get to it 👍🏻~~
-### As promised, your install DIR is now detected automatically.
-Provided it's on C: - if it isn't, you'll need to edit the script at line 11. Just change "C:\" to the drive you have Steam installed on, so "D:\" or "E:\" for instance...
+As promised, your install DIR is now detected automatically, provided it's somewhere on C:\
+If it isn't on C:\, just edit the script (line 11), changing "C:\" to where the correct drive you have Steam installed on. "D:\" or "E:\", for example...
 
 
 <!-- Automation -->
 ## Automation
-This will run the script four seconds after Steam fires up (so after the button is remapped by Steam). YMMV - some systems are fine with a 4 second delay, others say Steam takes longer to open - adjust according to your system.
+This will run the script four seconds after Steam fires up (after the button is forcibly remapped by Steam 😑). 4 seconds works perfectly for me, although YMMV. Some say Steam takes a little longer to open; adjust according to your system.
 
 You'll need to:
-- Configure a *Scheduled Task*
-- Either be an admin, or stipulate an admin account for the task to run.
+- Configure a *Scheduled Task* and have an admin account available for the task to run under.
 - Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting audit 'Success' and 'Failure' flags in the Security Policy.
-- - Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking.
+```Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```
+```Configure the properties for both *success* and *failure*```
 
-- - Configure the properties for both 'success' and 'failure'.
+When you're ready, either use the included template, or create your own task
+- [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task, updating it to match your own system as you go, and importing it into Task Scheduler...
 
+  - `<Author>` - change this to your PC name and Username (<Author>COMPUTERNAME-CHANGE\ME</Author>). Use `whoami` in CMD to easily get it.
+  - `<UserId>` - Your *S-1-123456789....* number. Use `wmic useraccount get name,sid` in CMD to easily get it.
+  - `<Arguments>` - Your path to the PowerShell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "**C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1**"</Arguments>`
 
-You can either [use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your Scheduled Task by updating the tags to match your own and then importing it into Task Scheduler...
-
-  - `<Author>` - change this to your PC name and Username `<Author>COMPUTERNAME-CHANGE\ME</Author>`.
-  - `<UserId>` - To get your S-1-123456789.... number, run `wmic useraccount get name,sid` in command prompt to get it.
-  - `<Arguments>` - Update this with your path to your new PowerShell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1"</Arguments>`
-
-...or you can create the task yourself. Here's how to set it up...
-
+- Create the task yourself. Here's how...
 
 ### Set the Trigger
 (*Triggers* > *On an Event* > *Custom* > *XML*)
@@ -125,7 +122,7 @@ You can either [use the included template](https://github.com/CriticalPoint/Remo
     <Select Path="Application">
     *[System[Provider[@Name='Application'] and (Level=4 or Level=0) and (EventID=4688)]]
     and 
-     *[EventData[Data[@Name='NewProcessName'] and (Data='C:\Program Files (x86)\Steam\steam.exe')]]
+     *[EventData[Data[@Name='NewProcessName'] and (Data='**C:\Program Files (x86)\Steam\steam.exe**')]]
      </Select>
   </Query>
 </QueryList>
