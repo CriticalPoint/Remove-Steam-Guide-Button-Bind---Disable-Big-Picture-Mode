@@ -107,7 +107,7 @@ Follow along to:
 
 
 
-When you're ready, either use the included template, or create your own task [Manually](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode#set-the-trigger)
+When you're ready, either use the included template, or create your own task [Manually](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/README.md#manually)
 
 # Automatically
  [Use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task.
