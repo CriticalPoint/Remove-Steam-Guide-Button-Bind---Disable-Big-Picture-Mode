@@ -102,8 +102,10 @@ Run the script some time after Steam fires up - four seconds works for me althou
 
 Follow along to:
 - Configure a *Scheduled Task* and have an admin account available for the task to run under.
-- Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking), setting audit 'Success' and 'Failure' flags in the Security Policy.
+- Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking) (Start>Run `gpedit.msc`), and setting audit 'Success' and 'Failure' flags in the Security Policy.
 ```Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```, configure and enable both *success* and *failure*
+
+
 
 When you're ready, either use the included template, or create your own task [Manually](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode#set-the-trigger)
 
