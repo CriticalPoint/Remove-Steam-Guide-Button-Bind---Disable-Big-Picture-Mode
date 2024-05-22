@@ -28,17 +28,24 @@
     <a href="[https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode?readme=1#readme-top)">
     <img src="images/readmeAssets/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode' written across them" width="397" height="224">
     <br>
-    <h3 align="center">Stop Steam Big Picture Mode (BPM) taking over your controllers Home (Guide) button</h4>
+    <h3 align="left">Stop Steam Big Picture Mode (BPM) from taking over your controller's Home (Guide) button</h4>
   </a>
   <br>
-    <p align="center">
-    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too, since you're here), I started about creating a 'set and forget' script for my PC.
+    <p align="left">
+    Annoyed by Steam forcing Big Picture Mode when I press my Xbox Guide button (as you may be too since you're here), I created a 'set and forget' script for my PC.
     <br>
     <br>
     I did some digging to find out what's happening with Steam and the Guide assignment and arrived at a simple PowerShell script that removes all Guide button bindings when the Steam Client launches.
     <br>
     <br>
-    ⚠️ I'm looking for help that will allow everyone to have 'double-click' setup using an automated Scheduled Task creation tool. I'm close but stretched for time and specific knowledge to get it over the line.
+    </p>
+    <p align="right">
+      🚨  BTW, developers...
+        <br>
+    I'm looking for help that will allow everyone to have a 'double-click' setup
+        <br>using an automated Scheduled Task creation tool. I'm close but stretched
+        <br>for time and specific knowledge to get it over the line. Can you help?
+    <br>
     <br>
     If you're good with PowerShell, take a stab at <a href="https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/6" target="_blank">Scheduled Task automation | XML and PowerShell</a>
     <br>
@@ -53,18 +60,19 @@
 
 You press your Guide button to access Xbox Game Bar (for example) and BAM, Big Picture Mode from nowhere.
 
-You've tried disable it, you've toggled different things off, then on, and back to off but you're getting nowhere... "*Why isn't it working, what am I doing wrong?*"
+You've tried disabling it, you've toggled different things off, then on, and back to off but you're getting nowhere... "*Why isn't it working, what am I doing wrong?*"
 
-You've been set-up to fail as Steam re-maps that button at launch and again at exit. It does it a bunch of other times, too (when opening specific option pages), and it just keeps coming back.
+You've been set up to fail as Steam re-maps that button at launch and again at exit. It does it a bunch of other times, too (when opening specific option pages), and it just keeps coming back.
 
-It's not you, so you don't need to be forgiven for thinking that switching off a comedy-sized, giant button in the settings menu that says "Guide button focuses Steam", might actually work because, well, no, it doesn't.
+You don't need to be forgiven for thinking that switching off a COMEDY-SIZED giant button in the settings that says "_Guide button focuses Steam_", might do the trick, because no, it doesn't, it's not you.
+
 <img align="center" src="images/readmeAssets/GuideButtonDoes-Not-NotFocusSteam.png" alt="A screenshot of the Steam settings page with the option 'Guide button focuses Steam' highlighted.">
 
 # How it does it
 Targeting the SDL config directly ('*guide*' is a non-Steam assignment so unlikely to ever change), the script removes all bindings (from all controllers) in your settings.
 It doesn't matter if you're using a PlayStation, Xbox, Nintendo, aftermarket, off-brand or other controller - the Guide button will no longer be bound (in Steam) after the file runs.
 
-*Everything else is unaffected, Game Bar will still work as normal - it's just the Guide button assignment withint Steam that gets unmapped*
+*Everything else is unaffected and Game Bar will work as normal - it's just the Guide button assignment within Steam that's unmapped*
 
 
 
@@ -83,42 +91,55 @@ If you don't have PowerShell 7, see [Installing PowerShell on Windows](https://l
 
 <!-- USAGE -->
 # Usage
-## The script automatically finds your config
-Grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20PS%20SCRIPTS/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1).
 
-Open Steam and, after a few seconds, run the script. You'll likely have to adjust your execution policy - _Set-ExecutionPolicy Unrestricted_. Read about [PowerShell execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3).
+1 - Grab [Guide Unbind - Default Steam Install Location.ps1](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/1%20-%20PS%20SCRIPTS/Guide%20Unbind%20-%20Default%20Steam%20Install%20Location.ps1) and save it to ```C:\PS\Guide Unbind - Default Steam Install Location.ps1``` (for simplicity later)
 
+2 - Adjust your Powershell execution policy. In Powershell 7, type ```Set-ExecutionPolicy Unrestricted``` and hit enter. Read about [PowerShell execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3).
 
-As promised, your install DIR is now detected automatically, provided Steam is installed somewhere on C:\
+3 - Open Steam and, (after a few seconds), run the script. You should find that BPM is no longer mapped. If so, carry on reading to implement auto-triggering of the script when Steam launches, or leave now and live with double-clicking it when needed.
 
-If it isn't on C: you can just edit the script (line 11), changing "C:\" to the correct drive you have Steam installed.
-
-So "D:\", or "E:\" for example...
+_your Steam install DIR is detected automatically provided that it's installed on_ C:\. _If not, edit line 11 of the script, changing_ "C:\" _to the drive letter where Steam lives._
 
 
 <!-- Automation -->
 ## Automation
-Run the script some time after Steam fires up - four seconds works for me although YMMV. Some say Steam takes a little longer to open; adjust according to your system (default is set to 8).
+You can either manually just run the script some time after Steam launches (four seconds works for me, although YMMV), or you can automate it using some Windows trickery...
 
-Follow along to:
-- Configure a *Scheduled Task* and have an admin account available for the task to run under.
-- Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking) (Start>Run `gpedit.msc`), and setting audit 'Success' and 'Failure' flags in the Security Policy.
-```Computer Configuration  -->  Windows Setting  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```, configure and enable both *success* and *failure*
+- Configure a *Scheduled Task*. You'll need an admin account available for the task to be run under.
+- Enable [Audit process tracking](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-process-tracking) (Start>Run `gpedit.msc`), and set audit 'Success' and 'Failure' flags in the Security Policy.
+
+```Computer Configuration  -->  Windows Settings  -->  Security Settings  -->  Local Policies  -->  Audit Policy  -->  Audit Process Tracking```, configure and enable both *success* and *failure*   [Screenshot](images/readmeAssets/AuditProcessTracking.png)
 
 
-
-When you're ready, either use the included template, or create your own task [Manually](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/README.md#manually)
+Then either use the included template, or create your own task [Manually](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/README.md#manually)
 
 # Automatically
- [Use the included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) to create your own Scheduled Task.
+ (Right-click, open in new tab) ---> [Included template](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/blob/main/Scheduled%20Tasks/Remove%20Steam%20Guide-button%20Assignments.xml) - use this to create your own Scheduled Task.
  
  Update it to match your own settings and import it into Task Scheduler...
-  - `<Author>` - change this to your PC name and Username (<Author>COMPUTERNAME-CHANGE\ME</Author>). Use `whoami` in CMD to easily get it.
-  - `<UserId>` - Your *S-1-123456789....* number. Use `wmic useraccount get name,sid` in CMD to easily get it.
-  - `<Arguments>` - Your path to the PowerShell Script `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "**C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1**"</Arguments>`
+  - `<Author>` - change this to your PC name and Username (<Author>COMPUTERNAME-CHANGE\ME</Author>).
+      - Use `whoami` in CMD to easily get it.
+  
+  - `<UserId>` - Your *S-1-123456789....* number.
+      - Use `wmic useraccount get name,sid` in CMD to easily get it.
+
+  - `<Arguments>` - Set the path where you placed the PowerShell Script
+      - `<Arguments>-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "**C:\PATH TO SCRIPT\Guide Unbind - Default Steam Install Location.ps1**"</Arguments>`
+
+  - Getting the above settings right in the file is paramount to this working so take the time to DOUBLE check those values now before moving on.
+      - Now triple check them.
+  
+  - Open up your Task Scheduler and import the task   [Screenshot](images/readmeAssets/TaskSchedulerImport.png)
+
+  TESTING - Open Steam and check to see that after 8 seconds (the default), PowerShell runs in the background.
+
+  - ✅ BPM has gone - Good! You're all done 🤜🏻🤛🏻
+
+  - ❌ BPM opened - Bad. I reckon you've missed something and if I had to guess I'd put my money on the `<Author>`, `<UserId>` & `<Arguments>` tags.
+      - You might like to check out how to manually to apply the template to disgnose any issues - read on!
 
 # Manually
-Create the task yourself, here's how...
+Here's how to manually create the task yourself (within Task Scheduler...)
 
 ### 1. Set the Trigger
 (*Triggers* > *On an Event* > *Custom* > *XML*)
@@ -136,15 +157,14 @@ Create the task yourself, here's how...
 ```
 
 
-
 ### 2. Set the Action
-(*TS/Actions* > *Start a Program*)
+(*Task Scheduler --> Actions --> Start a Program*)
 
 'Program/Script'  ```pwsh```
 
 'Arguments'  ```-ExecutionPolicy Unrestricted -WindowStyle Hidden -File "C:\PS\Guide Unbind - Default Steam Install Location.ps1"```
 
-*This assumes the location of the script is in a folder named 'PS', on the root of C: - Update path as necessary!*
+*This assumes the location of the script is in a folder named 'PS', on the root of C: - **Update as necessary!***
 
 
 ### 3. Configure the Settings
@@ -162,8 +182,10 @@ Specify these additional settings (and their values), not that *almost* but not 
 A full set of reference screenshots are available (CTRL+click to open each in a new tab) - [General](images/taskScheduler/General.png) - [Triggers](images/taskScheduler/Triggers.png) - [Actions](images/taskScheduler/Actions.png) - [Conditions](images/taskScheduler/Conditions.png) - [Settings](images/taskScheduler/Settings.png)
 
 
-
 ### 4. Save!
+
+
+
 
 
 You can verify the success of this by first disabling the Task and testing your Guide button in Steam. It should enter BPM.
@@ -184,6 +206,8 @@ The final Diff Check (minus all my personal info) is also available, here [Remov
 
 
 
+
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -195,10 +219,13 @@ Don't forget to give the project a star! Thanks again!
 
 
 
+
 <!-- Bugs -->
 ## Issues and Bugs!
 
 🪲 Discovered a bug? Please [open a Bug report](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/issues/new?assignees=CriticalPoint&labels=&projects=&template=bug_report.md&title=) so that I can fix/polish/improve it!
+
+
 
 
 
@@ -209,12 +236,16 @@ This software is provided as-is and, although I have tested it on my machine, a 
 
 
 
+
+
 <!-- CONTACT -->
 ## Contact
 
 Reach me via [Discussions](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode/discussions), if you need me! 👍🏻
 
 Project Link: [CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode)
+
+
 
 
 
