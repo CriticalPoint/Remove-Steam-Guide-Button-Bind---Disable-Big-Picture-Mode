@@ -24,6 +24,8 @@
 -->
 <!-- PROJECT LOGO -->
 
+<div align="center"><h1 style="color: red; font-size: 40px;">Due to a recent Steam update, this project no longer works out of the box as the 'guide:xx' mapping is not present until a controller is first configured manually</h1></div>
+<br><br><br><br><br><br><br><br><br><br>
 <div align="center">
     <a href="[https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode](https://github.com/CriticalPoint/Remove-Steam-Guide-Button-Bind---Disable-Big-Picture-Mode?readme=1#readme-top)">
     <img src="images/readmeAssets/Xbox_Steam_Logo-small.png" alt="The Xbox and Steam Logos together with the wording 'Steam' and 'Big Picture Mode' written across them" width="397" height="224">
